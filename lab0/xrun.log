@@ -1,0 +1,6 @@
+xrun: 22.03-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s004: Started on Aug 29, 2022 at 00:01:24 CDT
+xrun
+	--help
+xrun: *E,NOSOPT1: Unknown option (--help).
+TOOL:	xrun	22.03-s004: Exiting on Aug 29, 2022 at 00:01:25 CDT  (total: 00:00:01)

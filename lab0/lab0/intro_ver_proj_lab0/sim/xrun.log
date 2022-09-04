@@ -1,0 +1,63 @@
+xrun: 22.03-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s004: Started on Aug 29, 2022 at 00:12:29 CDT
+irun
+	-f run.f
+		+access+rwc
+		-timescale 1ns/1ns
+		-gui
+		-incdir ../design/common
+		../design/common/addr_segregator_proc.sv
+		../tb/tb_addr_segregator_proc.sv
+xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+file: ../design/common/addr_segregator_proc.sv
+	module worklib.addr_segregator_proc:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_addr_segregator_proc.sv
+	module worklib.tb_addr_segregator_proc:sv
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory ../design/common given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_addr_segregator_proc
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.addr_segregator_proc:sv <0x663d1df2>
+			streams:   2, words:  1008
+		worklib.tb_addr_segregator_proc:sv <0x629df96a>
+			streams:   4, words:  2470
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               7       7
+		Scalar wires:            2       -
+		Vectored wires:          4       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Pseudo assignments:      3       3
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.tb_addr_segregator_proc:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/coe/cadence/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_addr_segregator_proc.address tb_addr_segregator_proc.blk_offset_proc tb_addr_segregator_proc.cmd_rd tb_addr_segregator_proc.cmd_wr tb_addr_segregator_proc.index_proc tb_addr_segregator_proc.tag_proc
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 30 NS + 0
+../tb/tb_addr_segregator_proc.sv:51         #10 $finish;
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	22.03-s004: Exiting on Aug 29, 2022 at 00:38:08 CDT  (total: 00:25:39)

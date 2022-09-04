@@ -1,0 +1,20 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.22.03.d
+-RUNMODE
+-INCDIR
+../design/common
+../design/common/addr_segregator_proc.sv
+../tb/tb_addr_segregator_proc.sv
+-CDSLIB
+./xcelium.d/run.lnx86.22.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.03.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.22.03.d/xllibs
+-ALLOWUNBOUND
