@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++access+rwc
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1662518133
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx86.22.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.22.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun	22.03-s004"
+-XLNAME
+./xcelium.d/run.lnx86.22.03.d/hera3.ece.tamu.edu_6714

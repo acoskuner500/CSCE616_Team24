@@ -30,7 +30,7 @@ module simple_mem (
         memory[i] <= 8'b0;
     end
     else if ((wr_en==1) && (rd_en==0))
-      #1 memory[addr] <= memory[addr] ^ data_in;
+      #1 memory[addr] <= /*memory[addr] ^*/ data_in;
     else if ((wr_en==0) && (rd_en==1))
       #1 data_out <= memory[addr];
   end
