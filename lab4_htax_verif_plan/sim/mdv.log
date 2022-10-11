@@ -1,0 +1,39 @@
+[FATAL] 2022-09-25 17:37:47,876 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-25 17:37:48,248 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-25 17:37:51,987 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 34152
+[FATAL] 2022-09-25 17:51:46,454 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-25 17:51:46,838 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-25 17:51:50,606 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 41146
+[FATAL] 2022-09-25 17:58:58,528 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-25 17:58:58,903 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-25 17:59:02,608 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 41717
+[ERROR] 2022-09-25 18:46:57,913 [com.cadence.ufi.gui.util.DefaultExceptionHandler] [AWT-EventQueue-0] - Tool has encountered an internal error.<br>Please send: /home/grads/a/acoskuner500/csce616/lab4_htax_verif_plan/sim/mdv.log to support@cadence.com<br>or contact Cadence Support.:java.util.ConcurrentModificationException
+[ERROR] 2022-09-25 18:46:57,915 [com.cadence.ufi.gui.util.DefaultExceptionHandler] [AWT-EventQueue-0] - Tool has encountered an internal error.<br>Please send: /home/grads/a/acoskuner500/csce616/lab4_htax_verif_plan/sim/mdv.log to support@cadence.com<br>or contact Cadence Support.
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
+	at java.util.ArrayList$Itr.next(ArrayList.java:859)
+	at com.cadence.mdv.vplanServices.VplanEntityUtils.resolveDefinedAttributesValues(VplanEntityUtils.java:37)
+	at com.cadence.mdv.vplanEntities.MetricPort.setDefinedAttributesAndConditions(MetricPort.java:123)
+	at com.cadence.mdv.vplanEntities.MetricPort.resolveAttributesAndConditions(MetricPort.java:78)
+	at com.cadence.mdv.vplanTreeHandler.PlanEditingManager.setAttributeValue(PlanEditingManager.java:946)
+	at com.cadence.mdv.MDVContextServicesImpl.setAttributeValue(MDVContextServicesImpl.java:1155)
+	at com.cadence.mdv.gui.data.NGVPlannerProxy.setAttributeValue(NGVPlannerProxy.java:553)
+	at com.cadence.mdv.gui.activities.vPlanner.NGVPlannerMainSubActivity$10.doWork(NGVPlannerMainSubActivity.java:1682)
+	at com.cadence.ufi.gui.worker.GUFITaskExecutor.doInBackground(GUFITaskExecutor.java:69)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[FATAL] 2022-09-25 20:12:33,261 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-25 20:12:33,613 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-25 20:12:37,219 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 37565
+[FATAL] 2022-09-26 15:47:46,548 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-26 15:47:46,884 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-26 15:47:50,634 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 41101
+[FATAL] 2022-09-26 16:17:33,056 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-09-26 16:17:33,402 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-09-26 16:17:36,863 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 35539
