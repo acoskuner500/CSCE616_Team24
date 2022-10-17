@@ -37,3 +37,6 @@ java.util.ConcurrentModificationException
 [FATAL] 2022-09-26 16:17:33,056 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
 [ERROR] 2022-09-26 16:17:33,402 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
 [INFO ] 2022-09-26 16:17:36,863 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 35539
+[FATAL] 2022-10-16 20:59:28,768 [com.cadence.mdv.bl.impl.core.blNative.BLNative] [main] - Failed resolving GCC version: 9.3.0. USING the default version of libimc
+[ERROR] 2022-10-16 20:59:29,129 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-10-16 20:59:32,275 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 37988

@@ -15,7 +15,10 @@ class mix_sequence_test extends base_test;
 	fix_dest_port_seq fix_dest_port_seq_;						//fix_dest_port sequence handle
 	
 //TO DO - Create handle(pointer) for the sequences
-
+	short_packet_seq 			short_packet_seq_;
+	long_packet_short_delay_seq long_packet_short_delay_seq_;
+	med_packet_fixed_vc_seq 	med_packet_fixed_vc_seq_;
+	random_seq 					random_seq_;
 
 	//Constructor
 	function new (string name, uvm_component parent);
@@ -32,6 +35,10 @@ class mix_sequence_test extends base_test;
 		fix_dest_port_seq_ 			= fix_dest_port_seq::type_id::create("fix_dest_port_seq_");	
 
 //TO DO - Create UVM instance of sequences using factory
+		short_packet_seq_ 				= short_packet_seq::type_id::create("short_packet_seq_");
+		long_packet_short_delay_seq_	= long_packet_short_delay_seq::type_id::create("long_packet_short_delay_seq_");	
+		med_packet_fixed_vc_seq_ 		= med_packet_fixed_vc_seq::type_id::create("med_packet_fixed_vc_seq_");	
+		random_seq_ 					= random_seq::type_id::create("random_seq_");		
 
 	endfunction : build_phase
 
@@ -50,7 +57,10 @@ class mix_sequence_test extends base_test;
 		fix_dest_port_seq_.start(sequencer);
 
 //TO DO - Start the sequences on sequencer
-
+		short_packet_seq_.start(sequencer);
+		long_packet_short_delay_seq_.start(sequencer);
+		med_packet_fixed_vc_seq_.start(sequencer);
+		random_seq_.start(sequencer);
 
 		phase.drop_objection(this);  //droping objection 
 		phase.phase_done.set_drain_time(this, 5us); //drain time after objection is drop

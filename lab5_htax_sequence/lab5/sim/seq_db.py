@@ -12,7 +12,7 @@ columnTitleRow = "Sequence, dest port, vc, length, delay\n"
 csv.write(columnTitleRow)
 
 
-file = "./irun.log"
+file = "./xrun.log"
 with open (file,"r") as fin:
 	for line in fin:
 		match = re.match(r'(  delay|  dest_port|  vc|  length|  parent sequence \(name\)).*', line, re.M|re.I)
