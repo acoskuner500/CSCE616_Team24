@@ -1,0 +1,1 @@
+s1(16Oct2022:19:43:12):  irun -f run.f +UVM_TESTNAME=simple_random_test 

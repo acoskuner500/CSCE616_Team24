@@ -1,0 +1,90 @@
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set whats-new-dont-show-at-startup 1
+
+#
+# Databases
+#
+database require waves -search {
+	./waves.shm/waves.trn
+	/home/grads/a/acoskuner500/csce616/lab6_htax_tx_interface_and_assertion/lab6/sim/waves.shm/waves.trn
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1536x889+0+23}] != ""} {
+    window geometry "Waveform 1" 1536x889+0+23
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_outport_req[3:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_vc_req[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_vc_gnt[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_data[63:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_sot[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_eot}
+	} ]
+set id [waveform add -signals  {
+	{waves::top.inst_htax_tx_intf[1].tx_release_gnt}
+	} ]
+
+waveform xview limits 11936.4ns 12720.807ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x250+0+0
+
+#
+# Layout selection
+#
