@@ -1,5 +1,5 @@
 xrun: 20.03-s006: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun	20.03-s006: Started on Oct 16, 2022 at 19:43:12 CDT
+TOOL:	xrun	20.03-s006: Started on Oct 18, 2022 at 20:50:00 CDT
 irun
 	-f run.f
 		+access+rwc
@@ -29,28 +29,14 @@ irun
 	+UVM_VERBOSITY=UVM_LOW
 
 xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+Recompiling... reason: file '../tb/htax_tx_interface.sv' is newer than expected.
+	expected: Sun Oct 16 23:47:30 2022
+	actual:   Tue Oct 18 20:49:48 2022
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /opt/coe/cadence/XCELIUM20/tools/methodology/UVM/CDNS-1.1d/sv
-file: ../design/htax_top.vp
-		errors: 0, warnings: 0
-file: ../design/htax_combinatoric_arbiter.vp
-		errors: 0, warnings: 0
-file: ../design/htax_outport_arbiter.vp
-		errors: 0, warnings: 0
-file: ../design/htax_outport_data_mux.vp
-		errors: 0, warnings: 0
-file: ../tb/htax_defines.sv
-file: ../tb/htax_pkg.sv
-	package worklib.htax_pkg:sv
-		errors: 0, warnings: 0
-file: ../tb/htax_top.sv
-	module worklib.top:sv
-		errors: 0, warnings: 0
 file: ../tb/htax_tx_interface.sv
 	interface worklib.htax_tx_interface:sv
 		errors: 0, warnings: 0
 file: ../tb/htax_rx_interface.sv
-	interface worklib.htax_rx_interface:sv
-		errors: 0, warnings: 0
 xmvlog: *W,SPDUSD: Include directory ../design given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 1
@@ -76,118 +62,22 @@ xmelab: *W,COVUCC (../tb/htax_env.sv,7|13): Block and Expression coverage types 
 	Enabling instrumentation for coverage types: block expression FSM toggle functional
 xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
 	Generating native compiled code:
-			streams:   9, words:  3411
-			streams:  16, words:  4508
-			streams:  11, words:  2964
-			streams:  37, words: 14534
-		worklib.uvm_pkg:sv <0x4119bead>
-			streams:   8, words:  5962
-		worklib.uvm_pkg:sv <0x01c82805>
-			streams:   8, words:  5734
-		worklib.uvm_pkg:sv <0x0b393eeb>
-			streams:   7, words:  5295
-		worklib.uvm_pkg:sv <0x63372b7c>
-			streams:   7, words:  1511
-		worklib.uvm_pkg:sv <0x7b7f0211>
-			streams:   8, words:  2150
-		worklib.uvm_pkg:sv <0x7d618cd3>
-			streams:  22, words: 42286
-		worklib.uvm_pkg:sv <0x357fa9a6>
-			streams:   7, words:  1511
-		worklib.uvm_pkg:sv <0x06e4f2e0>
-			streams:   7, words:  2522
-		worklib.uvm_pkg:sv <0x5d49f096>
-			streams:   7, words:  2522
-		worklib.uvm_pkg:sv <0x0df4c328>
-			streams:  28, words: 20761
-		worklib.uvm_pkg:sv <0x3e44ec36>
-			streams:  27, words: 19766
-		worklib.uvm_pkg:sv <0x5dea607f>
-			streams:  23, words: 19211
-		worklib.uvm_pkg:sv <0x39844320>
-			streams:  14, words:  4931
-		worklib.uvm_pkg:sv <0x139d422d>
-			streams:  26, words: 28257
-		worklib.uvm_pkg:sv <0x53650f2c>
-			streams:   7, words:  1950
-		worklib.uvm_pkg:sv <0x301b53a3>
-			streams:  14, words: 13981
-		worklib.uvm_pkg:sv <0x27778f6b>
-			streams:  26, words: 23179
-		worklib.uvm_pkg:sv <0x12340e8d>
-			streams:  25, words: 42348
-		worklib.uvm_pkg:sv <0x18096dc7>
-			streams:  27, words: 25519
-		worklib.uvm_pkg:sv <0x56045a90>
-			streams:  26, words: 37195
-		worklib.uvm_pkg:sv <0x371a60cf>
-			streams:  27, words: 27478
-		worklib.uvm_pkg:sv <0x20595a6d>
-			streams:  25, words: 39242
-		worklib.uvm_pkg:sv <0x707566f7>
-			streams:  27, words: 29102
-		worklib.uvm_pkg:sv <0x2324c593>
-			streams:  25, words: 44781
-		worklib.uvm_pkg:sv <0x2e3959ee>
-			streams:  27, words: 32719
-		worklib.uvm_pkg:sv <0x1a53ba50>
-			streams:  25, words: 39818
-		worklib.uvm_pkg:sv <0x76cf52cf>
-			streams:  25, words: 42372
-		worklib.uvm_pkg:sv <0x1d2c82a5>
-			streams:  27, words: 27076
-		worklib.uvm_pkg:sv <0x4e37b118>
-			streams:  25, words: 39167
-		worklib.uvm_pkg:sv <0x075871ab>
-			streams:  28, words: 63962
-		worklib.uvm_pkg:sv <0x38855855>
-			streams:  59, words: 62079
-		worklib.cdns_uvm_pkg:sv <0x501de145>
-			streams:  27, words: 28732
-		worklib.cdns_uvm_pkg:sv <0x6907db8f>
-			streams:   8, words:  3193
-		worklib.cdns_uvm_pkg:sv <0x21869221>
-			streams:  10, words:  7073
-		worklib.uvm_pkg:sv <0x32917b9d>
+		worklib.uvm_pkg:sv <0x597ec978>
 			streams:  24, words: 15554
-		worklib.top:sv <0x169cf9fa>
+		worklib.top:sv <0x329ccde7>
 			streams:  26, words: 18425
-		worklib.uvm_pkg:sv <0x430e4601>
-			streams:   7, words:  2522
-		worklib.uvm_pkg:sv <0x1f8330f8>
+		worklib.uvm_pkg:sv <0x0bf82efb>
 			streams:  24, words: 16219
-		worklib.uvm_pkg:sv <0x3d5a67c4>
+		worklib.uvm_pkg:sv <0x0e8d6dd5>
 			streams:  25, words: 23854
-		worklib.uvm_pkg:sv <0x7e31f603>
-			streams:   9, words:  3700
-		worklib.uvm_pkg:sv <0x0961d8ed>
+		worklib.uvm_pkg:sv <0x159c5cc7>
 			streams:  48, words: 58235
-		worklib.uvm_pkg:sv <0x6ca8554f>
-			streams:  25, words: 21993
-		worklib.uvm_pkg:sv <0x7105537e>
-			streams:  34, words: 25537
-		worklib.uvm_pkg:sv <0x7fccd394>
-			streams: 298, words: 265915
-		worklib.uvm_pkg:sv <0x509c6d4e>
-			streams:  24, words: 51704
-		worklib.top:sv <0x49b6c06a>
-			streams: 185, words: 172486
-		worklib.htax_pkg:sv <0x61761848>
-			streams:   0, words:     0
-		worklib.htax_tx_interface:sv <0x484d6bf7>
-			streams:   5, words:  3568
-		worklib.htax_tx_interface:sv <0x5ca1df7a>
-			streams:   5, words:  3568
-		worklib.htax_rx_interface:sv <0x2e7fa10f>
-			streams:   4, words:  3456
-		worklib.cdns_uvm_pkg:sv <0x51ca5693>
-			streams: 134, words: 203591
-		worklib.cdns_uvmapi:svp <0x1dcb7997>
-			streams:  27, words: 25810
-		worklib.cdns_assert2uvm_pkg:sv <0x4d77a3e9>
-			streams:   3, words:  1869
-		worklib.uvm_pkg:sv <0x7dd88053>
-			streams: 4442, words: 5824171
+		worklib.top:sv <0x6b05edfd>
+			streams: 185, words: 172522
+		worklib.htax_tx_interface:sv <0x6f4b1636>
+			streams:  50, words: 35834
+		worklib.htax_tx_interface:sv <0x5a7ffd95>
+			streams:  50, words: 35834
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -195,16 +85,16 @@ xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog log
 		Modules:                      14       5
 		Interfaces:                    8       2
 		Verilog packages:              5       5
-		Registers:                 14279   10233
+		Registers:                 14619   10318
 		Scalar wires:                158       -
 		Vectored wires:              108       -
-		Named events:                  8      13
-		Always blocks:                66      21
-		Initial blocks:              298     159
+		Named events:                 48      23
+		Always blocks:               338      89
+		Initial blocks:              378     179
 		Parallel blocks:              26      27
 		Cont. assignments:            89      56
 		Pseudo assignments:           60      60
-		Assertions:                    6       3
+		Assertions:                   46      13
 		SV Class declarations:       198     312
 		SV Class specializations:    384     384
 		Simulation timescale:        1ps
@@ -774,6 +664,6 @@ coverage setup:
   testname :  test
 
 coverage files:
-  model(design data) :  ./cov_work/scope/icc_53c03015_6055ecc0.ucm
-  data               :  ./cov_work/scope/test/icc_53c03015_6055ecc0.ucd
-TOOL:	xrun	20.03-s006: Exiting on Oct 16, 2022 at 19:43:18 CDT  (total: 00:00:06)
+  model(design data) :  ./cov_work/scope/icc_53c03015_5da8b3f5.ucm
+  data               :  ./cov_work/scope/test/icc_53c03015_5da8b3f5.ucd
+TOOL:	xrun	20.03-s006: Exiting on Oct 18, 2022 at 20:50:04 CDT  (total: 00:00:04)

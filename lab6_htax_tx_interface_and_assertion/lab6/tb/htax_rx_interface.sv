@@ -35,5 +35,16 @@ always @(negedge rx_eot)
 //TO DO : ASSERTIONS
 
 //Add at least one assertion below
+	// ------------------------------------------- 
+	// rx_eot is asserted for a single clock cycle 
+	// ------------------------------------------- 
+	property rx_eot_one_cycle;
+		@(posedge clk)
+		rx_eot |-> ##1 (!rx_eot);
+	endproperty
+
+	assert_rx_eot_one_cycle : assert property(rx_eot_one_cycle)
+	else
+		$error("HTAX_RX_INF ERROR : rx_eot is not asserted for a single clock cycle");
 
 endinterface : htax_rx_interface
