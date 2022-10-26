@@ -38,19 +38,22 @@ class htax_tx_monitor_c extends uvm_monitor;
 			
 			@(posedge |htax_tx_intf.tx_vc_gnt) begin
 				//TO DO : Assign tx_mon_packet.dest_port from htax_tx_intf.tx_outport_req
-
-
-
+				case (htax_tx_intf.tx_outport_req)
+					'b0000,
+					'b0001: tx_mon_packet.dest_port = 'b0000;
+					'b0010: tx_mon_packet.dest_port = 'b0001;
+					'b0100: tx_mon_packet.dest_port = 'b0010;
+					'b1000: tx_mon_packet.dest_port = 'b0011;
+				endcase
 			end		
 					
 			@(posedge htax_tx_intf.clk);
 			//TO DO : On consequtive cycles append htax_tx_intf.tx_data to tx_mon_packet.data[] till htax_tx_intf.tx_eot pulse
-			while(XXX) begin // TO DO : Replace XXX with appropriate condition
-
-
-
-
+			while(!htax_tx_intf.tx_eot) begin // TO DO : Replace XXX with appropriate condition
+				tx_mon_packet.data = new[pkt_len++] ({tx_mon_packet.data, htax_tx_intf.tx_data});
+				@(posedge htax_tx_intf.clk);
 			end
+			tx_mon_packet.data = new[pkt_len++] ({tx_mon_packet.data, htax_tx_intf.tx_data});
 			tx_mon_packet.print();
 		end
 	endtask : run_phase

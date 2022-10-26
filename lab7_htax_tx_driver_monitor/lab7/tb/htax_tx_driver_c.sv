@@ -62,13 +62,13 @@ task htax_tx_driver_c::drive_thru_dut(htax_packet_c pkt);
 	//On next clk-posedge 
 	//TO DO : Set htax_tx_intf.tx_outport_req in one-hot fashion from pkt.dest_port
 	//TO DO : Assign htax_tx_intf.tx_vc_req from pkt.vc
-	@(posedge htax_tx_intf.clk)
-
-
-
+	@(posedge htax_tx_intf.clk) begin
+		htax_tx_intf.tx_outport_req = 1 << pkt.dest_port;
+		htax_tx_intf.tx_vc_req = pkt.vc;
+	end
 
 	//TO DO : Wait till htax_tx_intf.tx_vc_gnt is received
-
+	@(posedge |htax_tx_intf.tx_vc_gnt)
 
 
 	//On next clk-posedge
@@ -76,29 +76,40 @@ task htax_tx_driver_c::drive_thru_dut(htax_packet_c pkt);
 	//				(refer to SPEC doc for more details)
 	//TO DO : Drive pkt.data[0] on htax_tx_intf.tx_data
 	//TO DO : Reset htax_tx_intf.tx_outport_req and htax_tx_intf.tx_vc_req (to zero)
-	@(posedge htax_tx_intf.clk)
-
-
-
-
+	@(posedge htax_tx_intf.clk) begin
+		case (htax_tx_intf.tx_vc_gnt)
+			'b11,
+			'b01: htax_tx_intf.tx_sot = 'b01;
+			'b10: htax_tx_intf.tx_sot = 'b10;
+			default: htax_tx_intf.tx_sot = 'b00;
+		endcase
+		htax_tx_intf.tx_data = pkt.data[0];
+		htax_tx_intf.tx_outport_req = 'b0;
+		htax_tx_intf.tx_vc_req = 'b0;
+	end
 
 	//TO DO : On consecutive clk-posedges drive each of the packet's pkt.data on htax_tx_intf.tx_data
 	//TO DO : Assign htax_tx_intf.tx_sot to zero after first cycle
 	//TO DO : Assert htax_tx_intf.tx_release_gnt for one clock cycle when driving second last data packet
 	//TO DO : Assert htax_tx_intf.tx_eot for one clock cycle when driving last data packet
-	for(int i=XXX; i < YYY; i++) begin  //TO DO : Replace XXX and YYY with appropriate values for a packet
-		@(posedge htax_tx_intf.clk)
-
-
-
-
+	for(int i=1; i < pkt.length; i++) begin  //TO DO : Replace XXX and YYY with appropriate values for a packet
+		@(posedge htax_tx_intf.clk) begin
+			htax_tx_intf.tx_sot = 'b00;
+			htax_tx_intf.tx_data = pkt.data[i];
+			if (i == pkt.length - 2) htax_tx_intf.tx_release_gnt = 'b1;
+			if (i == pkt.length - 1) begin
+				htax_tx_intf.tx_release_gnt = 'b0;
+				htax_tx_intf.tx_eot = 'b1;
+			end
+		end
 	end
 
 	//On next clk-posedge
 	//TO DO : Assign htax_tx_intf.tx_data to X and htax_tx_intf.tx_eot to zero
-	@(posedge htax_tx_intf.clk)
-
-
+	@(posedge htax_tx_intf.clk) begin
+		htax_tx_intf.tx_data = 'bx;
+		htax_tx_intf.tx_eot = 'b0;
+	end
 
 	`uvm_info (get_type_name(), $sformatf("Ended Driving Data Packet to DUT"), UVM_NONE)
 endtask : drive_thru_dut	
