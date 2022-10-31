@@ -74,21 +74,12 @@ class htax_scoreboard_c extends uvm_scoreboard;
 	//TO DO : Complete the code for push_to_queue function -- preferably use the SV-Case statement
 	//Add incoming TX Monitor packet to corresponding queue from mon_pkt.dest_port
 	function void push_to_queue(htax_tx_mon_packet_c mon_pkt);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		case (mon_pkt.dest_port)
+			4'b0000: port0_queue.push_front(mon_pkt);
+			4'b0001: port1_queue.push_front(mon_pkt);
+			4'b0010: port2_queue.push_front(mon_pkt);
+			4'b0011: port3_queue.push_front(mon_pkt);
+		endcase
 	endfunction : push_to_queue
 
 	//Write Method - RX[0] Monitor
@@ -109,12 +100,15 @@ class htax_scoreboard_c extends uvm_scoreboard;
 		//TO DO : Create a new cmp_pkt[i]
 		//				Pop the last element from queue i assign it to cmp_pkt[i]
 		//				Compare the data field of cmp_pkt[i] and rx_mon_packet; Mismatch results into fatal error 
-
-
-
-
-
-
+		`uvm_info("SCOREBOARD",$sformatf("Received Data Packet on Port1:"), UVM_NONE)
+		rx_mon_packet.print();
+		cmp_pkt[1] = new ();
+		cmp_pkt[1] = port1_queue.pop_back();
+		if(cmp_pkt[1].data==rx_mon_packet.data)
+			`uvm_info("SCOREBOARD","Data matches for received pkt on port 1", UVM_NONE)
+		else
+			`uvm_fatal("SCOREBOARD","Data mismatch for received pkt on port 1")
+		`uvm_info("SCOREBOARD","Dropping pkt from queue 1", UVM_NONE)
 	endfunction : write_rx1_export
 
 	//TO DO : Write Method - RX[2] Monitor
@@ -122,11 +116,15 @@ class htax_scoreboard_c extends uvm_scoreboard;
 		//TO DO : Create a new cmp_pkt[i]
 		//				Pop the last element from queue i assign it to cmp_pkt[i]
 		//				Compare the data field of cmp_pkt[i] and rx_mon_packet; Mismatch results into fatal error 
-
-
-
-
-
+		`uvm_info("SCOREBOARD",$sformatf("Received Data Packet on Port2:"), UVM_NONE)
+		rx_mon_packet.print();
+		cmp_pkt[2] = new ();
+		cmp_pkt[2] = port2_queue.pop_back();
+		if(cmp_pkt[2].data==rx_mon_packet.data)
+			`uvm_info("SCOREBOARD","Data matches for received pkt on port 2", UVM_NONE)
+		else
+			`uvm_fatal("SCOREBOARD","Data mismatch for received pkt on port 2")
+		`uvm_info("SCOREBOARD","Dropping pkt from queue 2", UVM_NONE)
 	endfunction : write_rx2_export
 
 	//TO DO : Write Method - RX[3] Monitor
@@ -134,11 +132,15 @@ class htax_scoreboard_c extends uvm_scoreboard;
 		//TO DO : Create a new cmp_pkt[i]
 		//				Pop the last element from queue i assign it to cmp_pkt[i]
 		//				Compare the data field of cmp_pkt[i] and rx_mon_packet; Mismatch results into fatal error 
-
-
-
-
-
+		`uvm_info("SCOREBOARD",$sformatf("Received Data Packet on Port3:"), UVM_NONE)
+		rx_mon_packet.print();
+		cmp_pkt[3] = new ();
+		cmp_pkt[3] = port3_queue.pop_back();
+		if(cmp_pkt[3].data==rx_mon_packet.data)
+			`uvm_info("SCOREBOARD","Data matches for received pkt on port 3", UVM_NONE)
+		else
+			`uvm_fatal("SCOREBOARD","Data mismatch for received pkt on port 3")
+		`uvm_info("SCOREBOARD","Dropping pkt from queue 3", UVM_NONE)
 	endfunction : write_rx3_export
 
 	function void check();

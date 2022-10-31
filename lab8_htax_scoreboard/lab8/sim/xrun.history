@@ -1,0 +1,5 @@
+s1(31Oct2022:13:16:09):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s2(31Oct2022:13:17:57):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s3(31Oct2022:13:27:25):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s4(31Oct2022:13:32:37):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s5(31Oct2022:15:16:17):  irun -f run.f +UVM_TESTNAME=simple_random_test 

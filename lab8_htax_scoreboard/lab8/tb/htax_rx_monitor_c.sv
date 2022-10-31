@@ -32,18 +32,16 @@ class htax_rx_monitor_c extends uvm_monitor;
 		forever begin
 			pkt_len=0;
 			//TO DO : Wait for rising edge of htax_rx_intf.rx_sot
-
+			@(posedge |htax_rx_intf.rx_sot);
 
 			//TO DO : On consecutive clock cycles append htax_rx_intf.rx_data to rx_mon_packet.data[] till htax_rx_intf.rx_eot pulse
-			while(XXX) begin //TO DO : Replace XXX with appropriate condition in while loop
-
-
-
-
+			while(htax_rx_intf.rx_eot==0) begin //TO DO : Replace XXX with appropriate condition in while loop
+					@(posedge htax_rx_intf.clk)
+					rx_mon_packet.data = new[++pkt_len] (rx_mon_packet.data);
+					rx_mon_packet.data[pkt_len-1] = htax_rx_intf.rx_data;
 			end
 			//TO DO : Write the rx_mon_packet on anaylysis port
-
-
+			rx_collect_port.write(rx_mon_packet);
 		end
 	endtask : run_phase
 endclass : htax_rx_monitor_c
