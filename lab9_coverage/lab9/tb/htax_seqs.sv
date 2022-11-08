@@ -40,7 +40,7 @@ class simple_random_seq extends htax_base_seq;
 
 	virtual task body();
 		`uvm_info(get_type_name(),"Executing simple random sequence with 15 transactions", UVM_NONE)
-		repeat(15) begin
+		repeat(500) begin
 			`uvm_do(req)
 		end
 	endtask

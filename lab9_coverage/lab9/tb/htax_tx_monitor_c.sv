@@ -10,59 +10,45 @@ class htax_tx_monitor_c extends uvm_monitor;
 	htax_tx_mon_packet_c tx_mon_packet;
 	int pkt_len;
 
-  covergroup cover_htax_packet;
-    option.per_instance = 1;
-    option.name = "cover_htax_packet";
+	covergroup cover_htax_packet;
+		option.per_instance = 1;
+		option.name = "cover_htax_packet";
 
 
-    // Coverpoint for htax packet field : destination port
-    DEST_PORT : coverpoint tx_mon_packet.dest_port  {
-                                            					bins dest_port[] = {[0:3]};
-                                          					}
+		// Coverpoint for htax packet field : destination port
+		DEST_PORT : coverpoint tx_mon_packet.dest_port  {bins dest_port[] = {[0:3]};}
 
-    // TO DO : Coverpoint for htax packet field : vc (include vc=0 in illegal bin)
-		//VC : 	
-
-
-
-    // TO DO : Coverpoint for htax packet field : length (Divide range [3:63] into 16 bins)
-		//LENGTH : 
-
-
-
+		// TO DO : Coverpoint for htax packet field : vc (include vc=0 in illegal bin)   
+		VC: coverpoint tx_mon_packet.vc {illegal_bins b1= {0}; bins vc = {[0:$]};}
+		
+		// TO DO : Coverpoint for htax packet field : length (Divide range [3:63] into 16 bins)
+		LENGTH: coverpoint tx_mon_packet.length { bins b7[16]= {[3:63]};}    //Change it to [] if it does not work
 
 		// Coverpoints for Crosses
-		// TO DO : DEST_PORT cross VC
 
+		// TO DO : DEST_PORT cross VC
+		cross_DEST_PORT_VC : cross DEST_PORT, VC;
 
 		// TO DO : DEST_PORT cross LENGTH
-
+		cross_DEST_PORT_LENGTH : cross DEST_PORT, LENGTH;
 
 		// TO DO : VC cross LENGTH
+		cross_VC_LENGTH : cross VC, LENGTH;
 
-
-  endgroup
+	endgroup
 
 	covergroup cover_htax_tx_intf;
     option.per_instance = 1;
     option.name = "cover_htax_tx_intf";
 
-		
 		// TO DO : Coverpoint for tx_outport_req: covered all the values 0001,0010,0100,1000
-		
-
-
-
+		c1: coverpoint htax_tx_intf.tx_outport_req{bins b1 = {1,2,4,8}; ignore_bins b2 = {0};} 
 		
 		// TO DO : Coverpoint for tx_vc_req: All the VCs are requested atleast once. Ignore what is not allowed, or put it as illegal
-
-
-
-		
+		c2: coverpoint htax_tx_intf.tx_vc_req {bins b3 = {1,2,3}; illegal_bins b4 = {0};}
+                 
 		// TO DO : Coverpoint for tx_vc_gnt: All the virtual channels are granted atleast once.
-
-
-
+		c3: coverpoint htax_tx_intf.tx_vc_gnt {bins b5 = {1,2,3}; illegal_bins b6 = {0};}
 
 	endgroup
 
