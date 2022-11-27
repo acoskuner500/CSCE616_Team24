@@ -1,0 +1,9 @@
+1668295289 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/tb/htax_defines.sv
+1669502578 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/tb/htax_rx_interface.sv
+1668295289 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/tb/htax_top.sv
+1669507774 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/design/htax_outport_arbiter.v
+1669505676 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/design/htax_outport_data_mux.v
+1668295289 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/tb/htax_pkg.sv
+1668295289 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/design/htax_combinatoric_arbiter.v
+1669502556 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/tb/htax_tx_interface.sv
+1669505354 /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/design/htax_top.v

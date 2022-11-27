@@ -1,0 +1,25 @@
+
+#********** Test htax_regress___all_test___test6 **********
+
+BRUN_RUN_MODE="batch"; export BRUN_RUN_MODE
+BRUN_ORIGINAL_TEST_PATH="___all_test___test6"; export BRUN_ORIGINAL_TEST_PATH
+BRUN_TEST_GROUP_NAME="all_test"; export BRUN_TEST_GROUP_NAME
+BRUN_SIM_ARGS="$BRUN_SIM_ARGS"; export BRUN_SIM_ARGS
+BRUN_TIMEOUT="13000000"; export BRUN_TIMEOUT
+BRUN_ENGINE="$BRUN_ENGINE"; export BRUN_ENGINE
+BRUN_OWNER="acoskuner500"; export BRUN_OWNER
+BRUN_ESTIMATED_DURATION_VMGR="13000000"; export BRUN_ESTIMATED_DURATION_VMGR
+BRUN_VERIFICATION_SCOPE="default"; export BRUN_VERIFICATION_SCOPE
+BRUN_EXIT_ON="all"; export BRUN_EXIT_ON
+BRUN_FULLY_DIRECTED="false"; export BRUN_FULLY_DIRECTED
+BRUN_FULL_TITLE="htax_regress/all_test/test6"; export BRUN_FULL_TITLE
+BRUN_IDA_RECORDING_WINDOW="1000FS"; export BRUN_IDA_RECORDING_WINDOW
+BRUN_TEST_GROUP="htax_regress/all_test"; export BRUN_TEST_GROUP
+BRUN_MODEL_DIR="$BRUN_SESSION_DIR/model_dir"; export BRUN_MODEL_DIR
+BRUN_RUN_MODE="batch"; export BRUN_RUN_MODE
+BRUN_PRE_COMMANDS=""; export BRUN_PRE_COMMANDS
+BRUN_RUN_SCRIPT="cd /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim ; irun -f run_vm.f +UVM_TESTNAME=multiport_sequential_random_test -define TEST6"; export BRUN_RUN_SCRIPT
+BRUN_TEST_COMMAND="test"; export BRUN_TEST_COMMAND
+BRUN_TEST_NAME="test6"; export BRUN_TEST_NAME
+BRUN_ITERATION="0"; export BRUN_ITERATION
+BRUN_SCAN_SCRIPT="vm_scan.pl ius.flt shell.flt"; export BRUN_SCAN_SCRIPT

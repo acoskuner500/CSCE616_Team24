@@ -16,20 +16,14 @@ class htax_tx_monitor_c extends uvm_monitor;
 
 
     //Coverpoint for htax packet field : destination port
-    DEST_PORT : coverpoint tx_mon_packet.dest_port  {
-                                            					bins dest_port[] = {[0:3]};
-                                          					}
+    DEST_PORT : coverpoint tx_mon_packet.dest_port  {bins dest_port[] = {[0:3]};}
 
     //Coverpoint for htax packet field : vc
-    VC : coverpoint tx_mon_packet.vc 	{
-																				illegal_bins bin0 = {0};
-																			}
+    VC : coverpoint tx_mon_packet.vc 	{illegal_bins bin0 = {0};}
 
     //Coverpoint for htax packet field : length
-    LENGTH : coverpoint tx_mon_packet.length  {
-                                      					bins length[16] = {[0:63]};
-																								illegal_bins len = {[0:2]};
-                                    					}
+    LENGTH : coverpoint tx_mon_packet.length  {bins length[16] = {[0:63]};
+												illegal_bins len ={[0:2]};}
 		//Coverpoints for Crosses
 		//DEST_PORT cross VC
 		X_DEST_PORT__VC : cross DEST_PORT, VC;
@@ -48,19 +42,13 @@ class htax_tx_monitor_c extends uvm_monitor;
 
 		
 		//Coverpoint for tx_outport_req: covered all the values 0001,0010,0100,1000
-		OUTPORT_REQ : coverpoint htax_tx_intf.tx_outport_req 	{
-																														bins outport_req [] = {1,2,4,8};
-																													} 
+		OUTPORT_REQ : coverpoint htax_tx_intf.tx_outport_req 	{bins outport_req [] = {1,2,4,8};} 
 		
 		//Coverpoint for tx_vc_req: All the VCs are requested atleast once. Ignore what is not allowed, or put it as illegal
-		TX_VC_REQ : coverpoint htax_tx_intf.tx_vc_req 	{
-																												illegal_bins bin0 = {0};
-																											}
+		TX_VC_REQ : coverpoint htax_tx_intf.tx_vc_req 	{illegal_bins bin0 = {0};}
 		
 		//Coverpoint for tx_vc_gnt: All the virtual channels are granted atleast once.
-		TX_VC_GNT : coverpoint htax_tx_intf.tx_vc_gnt 	{
-																												illegal_bins bin0 = {0};
-																											}
+		TX_VC_GNT : coverpoint htax_tx_intf.tx_vc_gnt 	{illegal_bins bin0 = {0};}
 	endgroup
 
 	//constructor

@@ -13,15 +13,15 @@ module htax_outport_data_mux #(
 	parameter WIDTH = 64 
 
 )(
-	input wire          clk, res_n,
-	input [NUM_PORTS-1:0]     inport_sel, //one-hot-sel for mux
-	input wire          any_gnt,
-	input [(WIDTH*NUM_PORTS)-1:0] data_in,
-	input [NUM_PORTS-1:0]     eot_in,
+	input wire						clk, res_n,
+	input [NUM_PORTS-1:0]			inport_sel, //one-hot-sel for mux
+	input wire          			any_gnt,
+	input [(WIDTH*NUM_PORTS)-1:0] 	data_in,
+	input [NUM_PORTS-1:0]     		eot_in,
 	input wire [(VC*NUM_PORTS)-1:0] sot_in,
-	output reg [WIDTH-1:0]    data_out,
-	output reg          eot_out,
-	output reg [VC-1:0]     sot_out
+	output reg [WIDTH-1:0]    		data_out,
+	output reg          			eot_out,
+	output reg [VC-1:0]     		sot_out
 );
 
 	reg                   any_gnt_reg;

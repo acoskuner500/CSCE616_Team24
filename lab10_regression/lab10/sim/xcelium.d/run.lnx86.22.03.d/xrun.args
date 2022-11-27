@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-f
+run_vm.f
++UVM_TESTNAME=short_packet_test
+-define
+TEST8

@@ -35,10 +35,10 @@ module htax_outport_arbiter (
 	wire stop_arbiter;
 	
 	assign any_arbitration	= |(release_gnt & channel_open);
-	assign en_arbiter		= ~(|channel_open);
-	//assign en_arbiter		= ~(|channel_open) | any_arbitration;
-	assign stop_arbiter     = |channel_open;
-	//assign stop_arbiter     = |channel_open && !(|channel_open && any_arbitration);
+	// assign en_arbiter		= ~(|channel_open);
+	assign en_arbiter		= ~(|channel_open) | any_arbitration;
+	// assign stop_arbiter     = |channel_open;
+	assign stop_arbiter     = |channel_open && !(|channel_open && any_arbitration);
 
 	// channel_open reg
 	`ifdef ASYNC_RES

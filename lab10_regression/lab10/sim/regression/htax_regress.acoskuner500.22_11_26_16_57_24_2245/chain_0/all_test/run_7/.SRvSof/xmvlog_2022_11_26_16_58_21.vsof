@@ -1,0 +1,40 @@
+//
+// Written by NGen Library ver.1.2.6 2022-11-26 16:58:21
+//
+
+header vsof {
+        runner_version : <text>2</text> ;
+        version : <text>3</text> ;
+        vmanager_version : <text>10.20.xxx-yyy</text> ;
+}
+
+session_output "test" {
+        original_session_dir : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim</text>;
+        runs_in_session : 1;
+        session_description : <text>Single run of 'test'</text>;
+        session_dir : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim</text>;
+        session_end_time : <text>1669503501</text>;
+        session_name : <text>test</text>;
+        session_owner : <text>acoskuner500</text>;
+        session_start_time : <text>1669503501</text>;
+        session_status : <text>post_session_script_done</text>;
+        session_type : <text>single_run</text>;
+        top_dir : <text>$ATTR(session_dir)/..</text>;
+}
+
+run 1 {
+        end_time : <text>1669503501</text>;
+        engine : <text>xmsim</text>;
+        full_title : <text>test</text>;
+        parent_run : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_26_16_57_24_2245/htax_regress.vsof:htax_regress/all_test/test6@6</text>;
+        run_id : 1;
+        run_type : <text>simulation</text>;
+        simulator : <text>xmvlog</text>;
+        test_name : <text>test</text>;
+        verification_scope : <text>default</text>;
+
+        filter "xmvlog" {
+                filter_files : <text>cdns_sim.flt ovm_sv_lib.flt</text>;
+                filter_id : <text>xmvlog</text>;
+        }
+}

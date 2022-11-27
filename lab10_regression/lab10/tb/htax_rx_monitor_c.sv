@@ -15,10 +15,28 @@ class htax_rx_monitor_c extends uvm_monitor;
 	htax_rx_mon_packet_c rx_mon_packet;
 	int pkt_len;
 
+	covergroup cover_htax_rx_intf;
+		option.per_instance = 1;
+		option.name = "cover_htax_rx_intf";
+
+	// TO DO : Coverpoint for rx_vc_gnt: All the virtual channels are granted atleast once.
+		c1: coverpoint htax_rx_intf.rx_vc_gnt {illegal_bins b1 = {0};}
+	
+
+	// TO DO : Coverpoint for rx_vc_req: All the VCs are requested atleast once. Ignore what is not allowed, or put it as illegal
+		c2: coverpoint htax_rx_intf.rx_vc_req {illegal_bins b2 = {0};}
+					
+
+	// TO DO : Coverpoint for SOT: 
+		c3: coverpoint htax_rx_intf.rx_sot {bins b5 = {1,2}; illegal_bins b6 = {0,3};}
+
+	endgroup
+
 	function new (string name, uvm_component parent);
 		super.new(name, parent);
 		rx_collect_port = new ("rx_collect_port", this);
 		rx_mon_packet 	= new();
+		this.cover_htax_rx_intf = new();
 	endfunction : new
 
 	function void build_phase (uvm_phase phase);

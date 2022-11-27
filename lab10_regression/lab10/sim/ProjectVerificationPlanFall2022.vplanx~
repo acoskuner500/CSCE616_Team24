@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vplanx:plan xmlns:vplanx="http://www.cadence.com/vplanx">
+    <metaData id="2c48be5c-f2c7-4372-ab8b-bcb2bf1c0de3">
+        <name>CSCE 616 Project Fall2022</name>
+        <planId>6f9ddfe5-fa81-43fc-ad7e-f17160e1a7c0</planId>
+        <sourceTool>vPlanner</sourceTool>
+        <toolVersion>15.10</toolVersion>
+        <schemaVersion>1.0</schemaVersion>
+        <buildTime>2016-01-27 01:28:53</buildTime>
+    </metaData>
+    <rootElements>
+        <section id="35fc9abf-96f9-493b-83bf-e372c005a1a7">
+            <name>HTAX_v014</name>
+            <attributes>
+                <attribute>
+                    <name>details</name>
+                    <value>HTAX: Abbreviation for HyperTransport Advanced X-Bar. The HTAX defines a switching
+structure which resides in the HTOC fabric and allows bidirectional communication between
+different communication endpoints. The HTAX is a protocol agnostic switch and by definition
+able to switch arbitrary protocols. It is however optimized to support the HTOC protocol</value>
+                </attribute>
+            </attributes>
+            <subElements>
+                <section id="cbd2731f-fdf9-4770-ac88-b627181c81e0">
+                    <name>System Interface</name>
+                    <attributes>
+                        <attribute>
+                            <name>details</name>
+                            <value>System Interface.  There may be more to follow...</value>
+                        </attribute>
+                    </attributes>
+                    <subElements>
+                        <metricsPort id="6e103848-af67-4b78-bd45-770545cf3269">
+                            <name>Testcases to verify System Interface</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>TESTCASE</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Testcases to verify System Interface</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                        <metricsPort id="21351759-4520-4d11-954d-67f9e7df7c57">
+                            <name>Assertions_slash_Checkers for System Interface</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>CHECK</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Assertions/Checkers for System Interface</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                    </subElements>
+                </section>
+                <section id="7e06d182-8545-42a7-8391-ecf9b2df168d">
+                    <name>TX Interface </name>
+                    <attributes>
+                        <attribute>
+                            <name>details</name>
+                            <value>TX Interface.  Data packets are injected into the HTAX through the TX interface. Figure 2 (in specification) shows the TX interface signaling.</value>
+                        </attribute>
+                    </attributes>
+                    <subElements>
+                        <section id="3de1b02e-7037-4f3e-b1f3-3ab86ba9806b">
+                            <name>Testcases to verify TX interface</name>
+                            <subElements>
+<metricsPort id="2223ba05-b0b1-49d3-a8b8-80481cf5de16">
+    <name>Random test </name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with random TX port, RX port, delay and data</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="f18fc711-a34b-472e-8960-bb78908855bc">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test1&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="8a933f8b-2cf5-438e-a2b7-d6c35a9bf2a0">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test2&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="1256b41e-3a74-4b23-9804-0b142a4a3ca1">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test3&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="afbcea79-9d07-418b-ae70-f85587b82026">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test4&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="41781686-1733-488f-834f-396560fa1626">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test5&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="dc99b8b4-da64-4d97-bce3-efcdf6b4ca54">
+    <name>test6</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="b503952e-2056-498d-a42f-923e9d2a677d">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test6&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="a32e5d92-58d6-46fb-941c-09c9d701612f">
+    <name>Simple Port-Port test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with fixed TX port i and fixed RX port j</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="86f4c997-32be-4289-be84-4a3f71f82cce">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test7&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="0ba2c34a-9955-4ab6-9bd0-bb93ddfa017d">
+    <name>Short Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 3 and 10</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="61f697c2-afed-4895-a936-a23802356d3b">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test8&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="a5e4d16f-8653-46be-8a01-76e5051cfa66">
+    <name>Medium Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 11 and 35</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="a23b9766-559e-4f90-8b58-c3d84ade0a8d">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test9&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="9578dee8-27bb-4595-9c8f-2722117abfb5">
+    <name>Long Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 36 and 60</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="73c0dbee-f248-4b88-aec4-d76196bfaa37">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test10&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+                            </subElements>
+                        </section>
+                        <section id="4ff2f5dc-0ab4-4499-9771-92459be747b3">
+                            <name>Assertions_slash_Checkers for TX interface</name>
+                            <subElements>
+<metricsPort id="032cf64c-1e45-4ff4-a760-1796e97db0f6">
+    <name>tx_outport_req is one-hot </name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_outport_req is one-hot encoded signal and its width depends on the number of outports connected to the HTAX</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="1cd31c0c-5162-4d98-a5c2-c109766ec2a4">
+    <name>tx outport and vc req assert </name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_outport_req and tx_vc_req are asserted simultaneously</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="4a2cd6f2-05df-47e2-abbd-59107b69fd17">
+    <name>tx outport and vc req deassert </name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_outport_req and tx_vc_req are de-asserted simultaneously</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="5d0fff90-7afd-4e09-8ecd-29d3ea40a50f">
+    <name>tx_vc_gnt subset of tx_vc_req</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_vc_gnt within tx_vc_req</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="432dfd1f-ab99-4f0b-8662-cb9dcdd2a6e1">
+    <name>tx_sot with tx_vc_gnt</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>no tx_sot without previous tx_vc_gnt</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="36ca4c40-06bf-402c-aa47-759dad71eb9a">
+    <name>tx_eot with tx_vc_gnt</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>no tx_eot without previous tx_vc_gnt</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="41a0a3e2-7ad3-48cc-8a5b-57eba728e2c7">
+    <name>tx_eot single cycle</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_eot asserted for single cycle</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="cb392907-71f7-4987-9d19-6790aa50d23f">
+    <name>tx_release_gnt before tx_eot</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_release_gnt asserted for single cycle, one cycle before tx_eot is asserted</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="eff66b42-0be5-41dc-9354-1f8ac8eb2a9e">
+    <name>no next tx_sot without current tx_eot</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>No tx_sot of p(t+1) without tx_eot for p(t)</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="1a9d4534-6421-4eac-95a0-f0a4f6247615">
+    <name>valid packet transfer</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>rise of tx_outport_req followed by a tx_vc_gnt followed by tx_sot, followed by tx_release_gnt followed by tx_eot</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="0cdcca0e-3234-4d7e-803d-d274f5631800">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <assertion local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>ASSERTION</entityKind>
+            </entityKinds>
+            <pattern>top/&quot;inst_htax_tx_intf[3]&quot;/assert_valid_pkt_transfer</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="dbba2b73-1815-4008-b346-3b9694e88a71">
+    <name>tx_sot is one-hot</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>tx_sot is one-hot encoded</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="e87a5209-a10e-4aac-983a-897fd7481a58">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <assertion local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>ASSERTION</entityKind>
+            </entityKinds>
+            <pattern>top/&quot;inst_htax_tx_intf[3]&quot;/assert_tx_sot_one_hot</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+                            </subElements>
+                        </section>
+                    </subElements>
+                </section>
+                <section id="3f0c425d-690a-40a2-99e9-a66b77dd883e">
+                    <name>RX Interface</name>
+                    <attributes>
+                        <attribute>
+                            <name>details</name>
+                            <value>RX Interface.  Data packets are retrieved from the switch through the RX interface. The outport forwards packets to the receiving functional unit and contains an arbiter that hands out grants to the inports. It is a virtual channel aware multi request arbiter which allows to signal multiple packets of different virtual channels waiting for transaction to the receiver. The receiving functional unit needs to implement arbitration logic to determine which virtual channel to grant. The outport’s RX interface is shown in figure 6 (in specification). The receiver unit is allowed to grant several virtual channels concurrently.</value>
+                        </attribute>
+                    </attributes>
+                    <subElements>
+                        <section id="ef69f57d-f1e5-411d-ac7f-4e394e102fec">
+                            <name>Testcases to verify RX interface</name>
+                            <subElements>
+<metricsPort id="04e7c3f4-d41e-420e-a1fd-71124c17788a">
+    <name>Simple Port-Port test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with fixed TX port i and fixed RX port j</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="1ac734a2-6c11-4698-bb9b-62503a5e703a">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test7&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="f8eafaa0-f864-4c88-9ba1-0ffdccc07533">
+    <name>Short Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 3 and 10</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="6a43591e-bfc9-4ef5-b086-41e145d05f3b">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test8&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="e32e1880-3744-4eb9-ac8f-9e4e26500fe1">
+    <name>Medium Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 11 and 35</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="0eca153e-4311-4a2d-b8fa-0b074363b288">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test9&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="c94ad7e7-95eb-4bd6-be7f-d9e34fca186d">
+    <name>Long Packet test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with packet data length between 36 and 60</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="b8099c71-80d0-4ea8-8b7a-a09fe8f2e35a">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test10&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="6baae68a-f749-4c0d-9f46-f13fd4772746">
+    <name>Random test</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Test with random TX port, RX port, delay and data</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="bc6b049d-7584-47fe-8a53-5dad6e4a24d5">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test1&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="e1ce0881-6e54-4e2e-8f9a-cf03c995a7d4">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test2&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="dbbe3b90-78bd-481c-b2fd-82999cebdda8">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test3&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="993e07b3-b351-465e-a6a1-632b78488a0b">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test4&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+        <mappingPattern id="2a14bd97-cfc0-4dce-935d-e16d6dd4cf7c">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test5&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="4498c734-d193-49e4-8aae-521b787c1281">
+    <name>test6_1</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="33743fbf-56d6-4dcb-bec6-b8dffaee305b">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test6&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="ec917edf-c8e9-43d0-bacb-a7d35ff37d87">
+    <name>test5</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="5367f998-827f-4d77-af5e-c2fcc5a317ca">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test5&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="27c0f999-8d11-433b-a158-7ce9b5784968">
+    <name>test4</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="1fd9498d-1567-44a2-9f13-432bbaaffb9e">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test4&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="0f85e1e5-5a79-43da-a72d-ddddd3fe4c6a">
+    <name>test3</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="479c12b9-e776-4260-8b1f-2a0e8c368ab9">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test3&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="4f552faf-4d27-4cd8-9741-f32b2b866be2">
+    <name>test2</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="f90d1490-1d35-4c37-afbd-0badfe106571">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test2&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="2f3fbf98-c9a7-47ba-8502-9bd0b8ee7792">
+    <name>test1</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="3120a6b2-2d1c-44ed-a69d-a08115f6212e">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test1&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="c7ba9f57-d408-4069-9953-6e834bf361b4">
+    <name>test6</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>TESTCASE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="65602411-9a22-45b5-ad0a-0f1b47b6b431">
+            <domains>
+                <domain>TEST</domain>
+            </domains>
+            <entityKinds>
+                <entityKind>TESTCASE</entityKind>
+            </entityKinds>
+            <pattern>&quot;all_test&quot;/&quot;test6&quot;</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+                            </subElements>
+                        </section>
+                        <section id="71e79e39-6d8b-4ee8-a555-41eaae4c3584">
+                            <name>Assertions_slash_Checkers for RX interface</name>
+                            <subElements>
+<metricsPort id="dac96433-e54e-4180-9588-980a867e761a">
+    <name>rx_sot is one-hot</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>rx_sot is one-hot encoded and is asserted for a single cycle simultaneously with first data packet received</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="4cb5de7e-8bcf-4b74-9a2b-0a140c7f6a45">
+    <name>rx_eot timeout</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>rx_eot must occur within 1000 cycles of rx_sot</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="9ee910cd-b67e-4542-847a-08faaba1d292">
+    <name>rx_eot and rx_data assert</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>CHECK</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>rx_eot asserted for single cycle simultaneously with last data packet received</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+                            </subElements>
+                        </section>
+                    </subElements>
+                </section>
+                <section id="99aee3f4-251c-49ec-96da-9ff8169b53a3">
+                    <name>Burst Mode</name>
+                    <attributes>
+                        <attribute>
+                            <name>details</name>
+                            <value>Burst Mode.  The HTAX switch supports a burst mode. When sending minimum sized packets over the HTAX, bubbles are introduced through the delay of the arbitration mechanism. To address this issue the HTAX supports burst mode. A single grant can be used to transmit multiple packets.  Each packet is framed by sot and eot signals. The grant is only released by the release_gnt signal.  The FUs need to define a maximum burst size (MBS). If a grant is given by a FU the FU must be capable to receive multiple packets as defined by the MBS. The FUs may define burst capability only for small or larger messages. The definition of the MBS and the exact behaviour is out of scope of this specification and is part of the higher layer protocol (HTOC).</value>
+                        </attribute>
+                    </attributes>
+                    <subElements>
+                        <metricsPort id="57aa0b66-dccc-49f2-bed0-aec757715f6e">
+                            <name>Testcases to verify Burst Mode</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>TESTCASE</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Testcases to verify Burst Mode</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                        <metricsPort id="f66ba85b-e316-440d-93d7-cd6a5ceb7637">
+                            <name>Assertions_slash_Checkers for Burst Mode</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>CHECK</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Assertions/Checkers for Burst Mode</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                    </subElements>
+                </section>
+                <section id="0078ec9d-ad6e-4c19-a31b-621f7ff8c9ae">
+                    <name>HTOC Protocol</name>
+                    <attributes>
+                        <attribute>
+                            <name>details</name>
+                            <value>HTOC Protocol</value>
+                        </attribute>
+                    </attributes>
+                    <subElements>
+                        <metricsPort id="1655ce23-3646-40e9-ba0a-ca7870cacf6e">
+                            <name>Testcases to verify HTOC Protocol</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>TESTCASE</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Testcases to verify HTOC Protocol</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                        <metricsPort id="bf36bc24-e455-4e49-a276-0c7e504537f3">
+                            <name>Assertions_slash_Checkers for HTOC Protocol</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>CHECK</value>
+</attribute>
+<attribute>
+    <name>details</name>
+    <value>Assertions/Checkers for HTOC Protocol</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                        </metricsPort>
+                    </subElements>
+                </section>
+                <section id="8ab7f4a7-98a4-4612-aa2c-60030a5b69e1">
+                    <name>Functional Coverage</name>
+                    <subElements>
+                        <section id="c4876ccd-5b3a-4fd8-b0f2-08fef8b309f1">
+                            <name>System Interface</name>
+                        </section>
+                        <section id="35c846bc-67f6-4027-ba00-9945a0298a62">
+                            <name>TX Interface</name>
+                            <subElements>
+<metricsPort id="4868d3d0-eeec-4c67-9894-d50b657ee5bf">
+    <name>In port</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>TX or sender port 0,1,2,3</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="6eb6e53c-47c0-440d-9de2-0bfc988323e2">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[0]&quot;/tx_monitor/cover_htax_packet/DEST_PORT</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="01a7fddc-ea48-4e9e-afdd-9eeae71b1561">
+    <name>DEST_PORT_3</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="5f7e50a6-d76d-4500-9564-457c67ccc63d">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[3]&quot;/tx_monitor/cover_htax_packet/DEST_PORT</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="e3cbd38a-bb6f-4f79-a8a1-97ab0e7ae5d9">
+    <name>DEST_PORT_2</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="0b3eb7a0-4708-406a-a54d-889d0e884f93">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[2]&quot;/tx_monitor/cover_htax_packet/DEST_PORT</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="10f18ce6-6270-49d5-914c-8239f8abc20d">
+    <name>DEST_PORT_1</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="8cd937b1-8961-4f04-b1e0-7ee5ba16d17c">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[1]&quot;/tx_monitor/cover_htax_packet/DEST_PORT</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="8565bec7-a0e4-45d8-9d37-c43854faba74">
+    <name>DEST_PORT</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="0f00fce3-6b26-44f6-87f3-3711f8475f51">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[0]&quot;/tx_monitor/cover_htax_packet/DEST_PORT</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="ca8e0b4e-3588-46a6-8cc8-2aa85bd1058f">
+    <name>Outport Request</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>RX or receiver port 0,1,2,3</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="effe1141-e686-4212-9cc0-e11967864088">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[0]&quot;/tx_monitor/cover_htax_tx_intf/OUTPORT_REQ</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="b156a037-a201-4a02-b47d-5a694fa33fbe">
+    <name>Packet Data Length</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Packet with all possible data length 3-60</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="6763801b-d0e0-48b4-a8a9-6082a34a7486">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[0]&quot;/tx_monitor/cover_htax_packet/LENGTH</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="36eb3c2f-1216-43fe-b1a6-2411c3ca1578">
+    <name>Virtual Channel</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>VC 0, 1</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+    <mappingPatterns>
+        <mappingPattern id="81a77697-0c99-4eb8-814e-b638571aef65">
+            <domains>
+                <domain>HDL</domain>
+            </domains>
+            <hierarchies>
+                <hierarchy>INSTANCE</hierarchy>
+            </hierarchies>
+            <metricsTypes>
+                <cover_group local="true"/>
+            </metricsTypes>
+            <entityKinds>
+                <entityKind>COVERGROUP_ITEM</entityKind>
+            </entityKinds>
+            <pattern>uvm_pkg/uvm_test_top/tb/&quot;tx_port[0]&quot;/tx_monitor/cover_htax_packet/VC</pattern>
+            <verificationScope>default</verificationScope>
+        </mappingPattern>
+    </mappingPatterns>
+</metricsPort>
+<metricsPort id="28cc54c2-12e7-490e-bec8-1506b9155a1e">
+    <name>Number of transmissions</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Single transmission or back-to-back transmissions</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+                            </subElements>
+                        </section>
+                        <section id="449ffff8-8560-46ef-aa86-f0bf1f181ca4">
+                            <name>RX Interface</name>
+                            <subElements>
+<metricsPort id="fde39bb8-aca5-41c6-b266-fb97b015a8fd">
+    <name>In port</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>RX or receiver port 0,1,2,3</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="048040d7-7e12-4f53-b0e1-13094ea7243c">
+    <name>Outport request</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>TX or sender port 0,1,2,3</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="35d76b99-04ad-4309-a6af-864acf44d765">
+    <name>Packet Data Length</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>Packet with all possible data length 3-60</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+<metricsPort id="b8e8b655-c528-45cf-b336-4cbc1bfad714">
+    <name>Virtual Channel</name>
+    <attributes>
+        <attribute>
+            <name>metrics_port_kind</name>
+            <value>COVERAGE</value>
+        </attribute>
+        <attribute>
+            <name>creator</name>
+            <value>acoskuner500</value>
+        </attribute>
+        <attribute>
+            <name>details</name>
+            <value>VC 0, 1</value>
+        </attribute>
+    </attributes>
+    <assumePlanned>false</assumePlanned>
+</metricsPort>
+                            </subElements>
+                        </section>
+                        <section id="44b1a534-297c-477b-8044-4809a7566d3b">
+                            <name>Burst Mode</name>
+                        </section>
+                        <section id="19ff278b-858d-47fd-b92f-05873022a8c9">
+                            <name>HTOC Protocol</name>
+                        </section>
+                    </subElements>
+                </section>
+                <section id="237d0d23-2d4a-46c3-9a66-bebaf5179965">
+                    <name>Code Coverage</name>
+                    <subElements>
+                        <metricsPort id="88f1243b-5074-4e15-bffd-ccd8ddbb4748">
+                            <name>Block</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>COVERAGE</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                            <mappingPatterns>
+<mappingPattern id="93427936-c3e8-4de7-856a-79c1c1d8365c">
+    <domains>
+        <domain>HDL</domain>
+    </domains>
+    <hierarchies>
+        <hierarchy>INSTANCE</hierarchy>
+    </hierarchies>
+    <metricsTypes>
+        <block local="false"/>
+    </metricsTypes>
+    <entityKinds>
+        <entityKind>INSTANCE</entityKind>
+    </entityKinds>
+    <pattern>top</pattern>
+    <verificationScope>default</verificationScope>
+</mappingPattern>
+                            </mappingPatterns>
+                        </metricsPort>
+                        <metricsPort id="fde69b15-7a0e-4780-aae8-7b62fe881f26">
+                            <name>Expression</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>COVERAGE</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                            <mappingPatterns>
+<mappingPattern id="cc8a22f9-ea4a-47fa-9ca4-ee62afe0d1b1">
+    <domains>
+        <domain>HDL</domain>
+    </domains>
+    <hierarchies>
+        <hierarchy>INSTANCE</hierarchy>
+    </hierarchies>
+    <metricsTypes>
+        <expression local="false"/>
+    </metricsTypes>
+    <entityKinds>
+        <entityKind>INSTANCE</entityKind>
+    </entityKinds>
+    <pattern>top</pattern>
+    <verificationScope>default</verificationScope>
+</mappingPattern>
+                            </mappingPatterns>
+                        </metricsPort>
+                        <metricsPort id="5a2da621-3b6e-4737-a980-2a2d0c9f11b8">
+                            <name>Toggle</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>COVERAGE</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                            <mappingPatterns>
+<mappingPattern id="73c0d0b8-bff5-47aa-b4a0-80418624c535">
+    <domains>
+        <domain>HDL</domain>
+    </domains>
+    <hierarchies>
+        <hierarchy>INSTANCE</hierarchy>
+    </hierarchies>
+    <metricsTypes>
+        <toggle local="false"/>
+    </metricsTypes>
+    <entityKinds>
+        <entityKind>INSTANCE</entityKind>
+    </entityKinds>
+    <pattern>top</pattern>
+    <verificationScope>default</verificationScope>
+</mappingPattern>
+                            </mappingPatterns>
+                        </metricsPort>
+                        <metricsPort id="1370d630-c1a5-435f-85e7-f8ab16a14e19">
+                            <name>FSM</name>
+                            <attributes>
+<attribute>
+    <name>metrics_port_kind</name>
+    <value>COVERAGE</value>
+</attribute>
+                            </attributes>
+                            <assumePlanned>false</assumePlanned>
+                            <mappingPatterns>
+<mappingPattern id="812db158-c66b-4937-b711-f565b32b4cc7">
+    <domains>
+        <domain>HDL</domain>
+    </domains>
+    <hierarchies>
+        <hierarchy>INSTANCE</hierarchy>
+    </hierarchies>
+    <metricsTypes>
+        <fsm_state local="false"/>
+        <fsm_transition local="false"/>
+        <fsm_arc local="false"/>
+    </metricsTypes>
+    <entityKinds>
+        <entityKind>INSTANCE</entityKind>
+    </entityKinds>
+    <pattern>top</pattern>
+    <verificationScope>default</verificationScope>
+</mappingPattern>
+                            </mappingPatterns>
+                        </metricsPort>
+                    </subElements>
+                </section>
+            </subElements>
+        </section>
+    </rootElements>
+</vplanx:plan>

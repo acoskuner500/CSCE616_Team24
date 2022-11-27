@@ -185,66 +185,66 @@ begin
 	end
 	else
 	begin
-		fu0_tx_vc_gnt <= ( {fu3_inport_ack[0], fu3_inport_ack[0]} & fu3_rx_vc_gnt ) |
-										 ( {fu2_inport_ack[0], fu2_inport_ack[0]} & fu2_rx_vc_gnt ) |
-										 ( {fu1_inport_ack[0], fu1_inport_ack[0]} & fu1_rx_vc_gnt ) |
-										 ( {fu0_inport_ack[0], fu0_inport_ack[0]} & fu0_rx_vc_gnt );
-		fu1_tx_vc_gnt <= ( {fu3_inport_ack[1], fu3_inport_ack[1]} & fu3_rx_vc_gnt ) |
-										 ( {fu2_inport_ack[1], fu2_inport_ack[1]} & fu2_rx_vc_gnt ) |
-										 ( {fu1_inport_ack[1], fu1_inport_ack[1]} & fu1_rx_vc_gnt ) |
-										 ( {fu0_inport_ack[1], fu0_inport_ack[1]} & fu0_rx_vc_gnt );
-		fu2_tx_vc_gnt <= ( {fu3_inport_ack[2], fu3_inport_ack[2]} & fu3_rx_vc_gnt ) |
-										 ( {fu2_inport_ack[2], fu2_inport_ack[2]} & fu2_rx_vc_gnt ) |
-										 ( {fu1_inport_ack[2], fu1_inport_ack[2]} & fu1_rx_vc_gnt ) |
-										 ( {fu0_inport_ack[2], fu0_inport_ack[2]} & fu0_rx_vc_gnt );
-		fu3_tx_vc_gnt <= ( {fu3_inport_ack[3], fu3_inport_ack[3]} & fu3_rx_vc_gnt ) |
-										 ( {fu2_inport_ack[3], fu2_inport_ack[3]} & fu2_rx_vc_gnt ) |
-										 ( {fu1_inport_ack[3], fu1_inport_ack[3]} & fu1_rx_vc_gnt ) |
-										 ( {fu0_inport_ack[3], fu0_inport_ack[3]} & fu0_rx_vc_gnt );
+		fu0_tx_vc_gnt <= ({fu3_inport_ack[0], fu3_inport_ack[0]} & fu3_rx_vc_gnt ) |
+						( {fu2_inport_ack[0], fu2_inport_ack[0]} & fu2_rx_vc_gnt ) |
+						( {fu1_inport_ack[0], fu1_inport_ack[0]} & fu1_rx_vc_gnt ) |
+						( {fu0_inport_ack[0], fu0_inport_ack[0]} & fu0_rx_vc_gnt );
+		fu1_tx_vc_gnt <= ({fu3_inport_ack[1], fu3_inport_ack[1]} & fu3_rx_vc_gnt ) |
+						( {fu2_inport_ack[1], fu2_inport_ack[1]} & fu2_rx_vc_gnt ) |
+						( {fu1_inport_ack[1], fu1_inport_ack[1]} & fu1_rx_vc_gnt ) |
+						( {fu0_inport_ack[1], fu0_inport_ack[1]} & fu0_rx_vc_gnt );
+		fu2_tx_vc_gnt <= ({fu3_inport_ack[2], fu3_inport_ack[2]} & fu3_rx_vc_gnt ) |
+						( {fu2_inport_ack[2], fu2_inport_ack[2]} & fu2_rx_vc_gnt ) |
+						( {fu1_inport_ack[2], fu1_inport_ack[2]} & fu1_rx_vc_gnt ) |
+						( {fu0_inport_ack[2], fu0_inport_ack[2]} & fu0_rx_vc_gnt );
+		fu3_tx_vc_gnt <= ({fu3_inport_ack[3], fu3_inport_ack[3]} & fu3_rx_vc_gnt ) |
+						( {fu2_inport_ack[3], fu2_inport_ack[3]} & fu2_rx_vc_gnt ) |
+						( {fu1_inport_ack[3], fu1_inport_ack[3]} & fu1_rx_vc_gnt ) |
+						( {fu0_inport_ack[3], fu0_inport_ack[3]} & fu0_rx_vc_gnt );
 	end
 end
 
 //Mask inport vc requests so only the correct outport will be requested
-assign fu0_inport_requests = {{fu3_tx_outport_req[0], fu3_tx_outport_req[0]} & fu3_tx_vc_req,
-															{fu2_tx_outport_req[0], fu2_tx_outport_req[0]} & fu2_tx_vc_req,
-															{fu1_tx_outport_req[0], fu1_tx_outport_req[0]} & fu1_tx_vc_req,
-															{fu0_tx_outport_req[0], fu0_tx_outport_req[0]} & fu0_tx_vc_req};
+assign fu0_inport_requests = {  {fu3_tx_outport_req[0], fu3_tx_outport_req[0]} & fu3_tx_vc_req,
+								{fu2_tx_outport_req[0], fu2_tx_outport_req[0]} & fu2_tx_vc_req,
+								{fu1_tx_outport_req[0], fu1_tx_outport_req[0]} & fu1_tx_vc_req,
+								{fu0_tx_outport_req[0], fu0_tx_outport_req[0]} & fu0_tx_vc_req};
 
-assign fu1_inport_requests = {{fu3_tx_outport_req[1], fu3_tx_outport_req[1]} & fu3_tx_vc_req,
-															{fu2_tx_outport_req[1], fu2_tx_outport_req[1]} & fu2_tx_vc_req,
-															{fu1_tx_outport_req[1], fu1_tx_outport_req[1]} & fu1_tx_vc_req,
-															{fu0_tx_outport_req[1], fu0_tx_outport_req[1]} & fu0_tx_vc_req};
+assign fu1_inport_requests = {  {fu3_tx_outport_req[1], fu3_tx_outport_req[1]} & fu3_tx_vc_req,
+								{fu2_tx_outport_req[1], fu2_tx_outport_req[1]} & fu2_tx_vc_req,
+								{fu1_tx_outport_req[1], fu1_tx_outport_req[1]} & fu1_tx_vc_req,
+								{fu0_tx_outport_req[1], fu0_tx_outport_req[1]} & fu0_tx_vc_req};
 
-assign fu2_inport_requests = {{fu3_tx_outport_req[2], fu3_tx_outport_req[2]} & fu3_tx_vc_req,
-															{fu2_tx_outport_req[2], fu2_tx_outport_req[2]} & fu2_tx_vc_req,
-															{fu1_tx_outport_req[2], fu1_tx_outport_req[2]} & fu1_tx_vc_req,
-															{fu0_tx_outport_req[2], fu0_tx_outport_req[2]} & fu0_tx_vc_req};
+assign fu2_inport_requests = {  {fu3_tx_outport_req[2], fu3_tx_outport_req[2]} & fu3_tx_vc_req,
+								{fu2_tx_outport_req[2], fu2_tx_outport_req[2]} & fu2_tx_vc_req,
+								{fu1_tx_outport_req[2], fu1_tx_outport_req[2]} & fu1_tx_vc_req,
+								{fu0_tx_outport_req[2], fu0_tx_outport_req[2]} & fu0_tx_vc_req};
 
-assign fu3_inport_requests = {{fu3_tx_outport_req[3], fu3_tx_outport_req[3]} & fu3_tx_vc_req,
-															{fu2_tx_outport_req[3], fu2_tx_outport_req[3]} & fu2_tx_vc_req,
-															{fu1_tx_outport_req[3], fu1_tx_outport_req[3]} & fu1_tx_vc_req,
-															{fu0_tx_outport_req[3], fu0_tx_outport_req[3]} & fu0_tx_vc_req};
+assign fu3_inport_requests = {  {fu3_tx_outport_req[3], fu3_tx_outport_req[3]} & fu3_tx_vc_req,
+								{fu2_tx_outport_req[3], fu2_tx_outport_req[3]} & fu2_tx_vc_req,
+								{fu1_tx_outport_req[3], fu1_tx_outport_req[3]} & fu1_tx_vc_req,
+								{fu0_tx_outport_req[3], fu0_tx_outport_req[3]} & fu0_tx_vc_req};
 
 //OR togehter the vc requests for a specific outport
 assign fu0_rx_vc_req = {({fu3_tx_outport_req[0], fu3_tx_outport_req[0]} & fu3_tx_vc_req)|
-												({fu2_tx_outport_req[0], fu2_tx_outport_req[0]} & fu2_tx_vc_req)|
-												({fu1_tx_outport_req[0], fu1_tx_outport_req[0]} & fu1_tx_vc_req)|
-												({fu0_tx_outport_req[0], fu0_tx_outport_req[0]} & fu0_tx_vc_req)};
+						({fu2_tx_outport_req[0], fu2_tx_outport_req[0]} & fu2_tx_vc_req)|
+						({fu1_tx_outport_req[0], fu1_tx_outport_req[0]} & fu1_tx_vc_req)|
+						({fu0_tx_outport_req[0], fu0_tx_outport_req[0]} & fu0_tx_vc_req)};
 
 assign fu1_rx_vc_req = {({fu3_tx_outport_req[1], fu3_tx_outport_req[1]} & fu3_tx_vc_req)|
-												({fu2_tx_outport_req[1], fu2_tx_outport_req[1]} & fu2_tx_vc_req)|
-												({fu1_tx_outport_req[1], fu1_tx_outport_req[1]} & fu1_tx_vc_req)|
-												({fu0_tx_outport_req[1], fu0_tx_outport_req[1]} & fu0_tx_vc_req)};
+						({fu2_tx_outport_req[1], fu2_tx_outport_req[1]} & fu2_tx_vc_req)|
+						({fu1_tx_outport_req[1], fu1_tx_outport_req[1]} & fu1_tx_vc_req)|
+						({fu0_tx_outport_req[1], fu0_tx_outport_req[1]} & fu0_tx_vc_req)};
 
 assign fu2_rx_vc_req = {({fu3_tx_outport_req[2], fu3_tx_outport_req[2]} & fu3_tx_vc_req)|
-												({fu2_tx_outport_req[2], fu2_tx_outport_req[2]} & fu2_tx_vc_req)|
-												({fu1_tx_outport_req[2], fu1_tx_outport_req[2]} & fu1_tx_vc_req)|
-												({fu0_tx_outport_req[2], fu0_tx_outport_req[2]} & fu0_tx_vc_req)};
+						({fu2_tx_outport_req[2], fu2_tx_outport_req[2]} & fu2_tx_vc_req)|
+						({fu1_tx_outport_req[2], fu1_tx_outport_req[2]} & fu1_tx_vc_req)|
+						({fu0_tx_outport_req[2], fu0_tx_outport_req[2]} & fu0_tx_vc_req)};
 
 assign fu3_rx_vc_req = {({fu3_tx_outport_req[3], fu3_tx_outport_req[3]} & fu3_tx_vc_req)|
-												({fu2_tx_outport_req[3], fu2_tx_outport_req[3]} & fu2_tx_vc_req)|
-												({fu1_tx_outport_req[3], fu1_tx_outport_req[3]} & fu1_tx_vc_req)|
-												({fu0_tx_outport_req[3], fu0_tx_outport_req[3]} & fu0_tx_vc_req)};
+						({fu2_tx_outport_req[3], fu2_tx_outport_req[3]} & fu2_tx_vc_req)|
+						({fu1_tx_outport_req[3], fu1_tx_outport_req[3]} & fu1_tx_vc_req)|
+						({fu0_tx_outport_req[3], fu0_tx_outport_req[3]} & fu0_tx_vc_req)};
 
 	//Mask out release grant signal for small packets to avoid false arbitrations
 	//If sot is asserted in the same cycle the release_gnt signal is masked out.

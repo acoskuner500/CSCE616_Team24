@@ -54,5 +54,29 @@ end
    assert_eot_timeout_check : assert property(rx_eot_timeout_check)
    else
       $fatal("HTAX_RX_INF ERROR : TIMEOUT rx_eot did not occur within 1000 cycles after rx_sot");
+	  
+	// --------------------------- 
+	// rx_sot is one-hot 
+	// --------------------------- 
+	property rx_sot_one_hot;
+		@(posedge clk) disable iff(!rst_n)
+		(|rx_sot) |-> $onehot(rx_sot);
+	endproperty
+
+	assert_rx_sot_one_hot : assert property(rx_sot_one_hot)
+	else
+		$error("HTAX_TX_INF ERROR : rx_sot is not one hot encoded");
+
+	// ------------------------------------------- 
+	// rx_eot is asserted for a single clock cycle 
+	// ------------------------------------------- 
+	property rx_eot_one_cycle;
+		@(posedge clk)
+		rx_eot |-> ##1 (!rx_eot);
+	endproperty
+
+	assert_rx_eot_one_cycle : assert property(rx_eot_one_cycle)
+	else
+		$error("HTAX_RX_INF ERROR : rx_eot is not asserted for a single clock cycle");
 
 endinterface : htax_rx_interface

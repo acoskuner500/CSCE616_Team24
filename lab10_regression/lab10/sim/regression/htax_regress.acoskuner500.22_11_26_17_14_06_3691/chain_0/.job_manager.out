@@ -1,0 +1,5 @@
+ count is 30
+Nov 26, 2022 5:14:09 PM com.orientechnologies.common.log.OLogManager log
+INFO: Detected limit of amount of simultaneously open files is 4096,  limit of open files for disk cache will be set to 1536
+Nov 26, 2022 5:14:09 PM com.orientechnologies.common.log.OLogManager log
+WARNING: Value of limit of simultaneously open files is too small, recommended value is 262144
