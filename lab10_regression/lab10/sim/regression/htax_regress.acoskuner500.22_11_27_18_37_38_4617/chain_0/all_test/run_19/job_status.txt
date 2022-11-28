@@ -1,0 +1,8 @@
+extend 19 {
+	job_status : <text>running</text>;
+	status : <text>running</text>;
+	host_name : <text>hera3.ece.tamu.edu</text>;
+	start_time : <text>1669595990</text>;
+	log_file : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_27_18_37_38_4617/chain_0/all_test/run_19/local_log.log</text>;
+}
+

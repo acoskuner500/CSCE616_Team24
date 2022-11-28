@@ -1,0 +1,52 @@
+//
+// Written by NGen Library ver.1.2.6 2022-11-28 11:07:53
+//
+
+header vsof {
+        runner_version : <text>2</text> ;
+        version : <text>3</text> ;
+        vmanager_version : <text>10.20.xxx-yyy</text> ;
+}
+
+session_output "test" {
+        original_session_dir : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_07_34_9000/chain_0/all_test/run_1/cov_work/scope</text>;
+        runs_in_session : 1;
+        session_description : <text>Single run of 'test'</text>;
+        session_dir : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_07_34_9000/chain_0/all_test/run_1/cov_work/scope</text>;
+        session_end_time : <text>1669655273</text>;
+        session_name : <text>test</text>;
+        session_owner : <text>acoskuner500</text>;
+        session_start_time : <text>1669655270</text>;
+        session_status : <text>post_session_script_done</text>;
+        session_type : <text>single_run</text>;
+        top_dir : <text>$ATTR(session_dir)/..</text>;
+}
+
+run 1 {
+        cpu_time : 226;
+        end_time : <text>1669655273</text>;
+        engine : <text>xmsim</text>;
+        full_title : <text>test</text>;
+        log_file : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/xrun.log<__SEPARATOR__>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/xrun.log</text>;
+        parent_run : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_07_34_9000/htax_regress.vsof:htax_regress/all_test/test1@0</text>;
+        run_dir : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_07_34_9000/chain_0/all_test/run_1/cov_work/scope/test</text>;
+        run_id : 1;
+        run_type : <text>simulation</text>;
+        simulator : <text>xmelab</text>;
+        system_time : 30;
+        test_name : <text>test</text>;
+        user_time : 196;
+        verification_scope : <text>default</text>;
+
+        filter "xmvlog" {
+                filter_files : <text>cdns_sim.flt ovm_sv_lib.flt</text>;
+                filter_id : <text>xmvlog</text>;
+                log_file : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/xrun.log</text>;
+        }
+
+        filter "xmelab" {
+                filter_files : <text>cdns_sim.flt ovm_sv_lib.flt</text>;
+                filter_id : <text>xmelab</text>;
+                log_file : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/xrun.log</text>;
+        }
+}

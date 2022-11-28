@@ -1,0 +1,11 @@
+2022-11-28 10:28:46,477 [com.cadence.mdv.jobsmanager.watchdog.WatchDog] [main] DEBUG - 
+------------------------------------------------------------
+Starting Jobs Manager Watch Dog
+------------------------------------------------------------
+2022-11-28 10:28:46,492 [com.cadence.mdv.jobsmanager.watchdog.WatchDog] [main] DEBUG - Looking for jobs manager host port in chain dir
+2022-11-28 10:28:56,501 [com.cadence.mdv.jobsmanager.watchdog.WatchDog] [main] DEBUG - jobs manager details: 10.55.150.37:43268
+2022-11-28 10:28:56,842 [com.cadence.mdv.jobsmanager.watchdog.WatchDog] [main] DEBUG - connecting to jobs manager: ws://10.55.150.37:43268/watchdog
+2022-11-28 10:28:57,007 [com.cadence.mdv.jobsmanager.watchdog.WatchDogSocket] [WebSocketClient@1062186835-16] DEBUG - watchdog connected to jobs manager web socket
+2022-11-28 10:28:57,008 [com.cadence.mdv.jobsmanager.watchdog.WatchDogSocket] [WebSocketClient@1062186835-16] DEBUG - got message: Start watching
+2022-11-28 10:32:23,798 [com.cadence.mdv.jobsmanager.watchdog.WatchDogSocket] [WebSocketClient@1062186835-18] DEBUG - got message: Quit
+2022-11-28 10:32:23,816 [com.cadence.mdv.jobsmanager.watchdog.WatchDogSocket] [WebSocketClient@1062186835-12] DEBUG - jobs manager closed connection. status code: 1001 reason: Shutdown

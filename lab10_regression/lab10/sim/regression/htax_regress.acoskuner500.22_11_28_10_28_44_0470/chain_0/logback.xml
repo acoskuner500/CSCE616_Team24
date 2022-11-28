@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="timeAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>.time_metrics/vmanager.runner.metrics.log</File>
+        <encoder>
+            <pattern>%m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <maxIndex>10</maxIndex>
+            <FileNamePattern>.time_metrics/vmanager.runner.metrics.log.%i</FileNamePattern>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{DATE} [%c] [%t] %-5p - %m%n</pattern>
+        </encoder>
+        <filter class="com.cadence.ufi.util.logging.FatalMarkerFilter"/>
+    </appender>
+    <appender name="ROLLINGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>vm_jobs_manager.log</File>
+        <encoder>
+            <pattern>%d{DATE} [%c] [%t] %-5p - %m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <maxIndex>10</maxIndex>
+            <FileNamePattern>vm_jobs_manager.log.%i</FileNamePattern>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+    <logger name="com.cadence.mdv.drm.base.DrmBaseControl_submit" level="DEBUG"/>
+    <logger name="time" additivity="false" level="INFO">
+        <appender-ref ref="timeAppender"/>
+    </logger>
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ROLLINGFILE"/>
+    </root>
+</configuration>

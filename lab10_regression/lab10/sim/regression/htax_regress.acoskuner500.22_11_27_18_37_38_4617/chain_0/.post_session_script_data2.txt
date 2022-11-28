@@ -1,0 +1,6 @@
+session_output htax_regress.acoskuner500.22_11_27_18_37_38_4617 {
+	session_status : <text>post_session_script_done</text>;
+	session_end_time : <text>1669596057</text>;
+	done_chain_id_vmgr : <text>0</text>;
+}
+
