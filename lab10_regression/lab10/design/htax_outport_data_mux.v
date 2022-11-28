@@ -52,7 +52,7 @@ module htax_outport_data_mux #(
 	 end else begin
 	  any_gnt_reg <= any_gnt;
 	  
-	  //if(any_gnt_reg)
+	  if(any_gnt_reg)
 	    inport_sel_reg <= inport_sel;
 	 end
 	end

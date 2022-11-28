@@ -14,7 +14,7 @@
 A
 -COVFILE
 ./cov_conf.ccf
-+UVM_TESTNAME=short_packet_test
++UVM_TESTNAME=simple_port_port_test
 -MESSAGES
 -XLMODE
 ./xcelium.d/run.lnx86.22.03.d

@@ -44,12 +44,12 @@ class short_packet_vsequence extends htax_base_vseq;
 		// Executing 10 TXNs on ports {0,1,2,3} randomly 
 		// Packet length between 3 and 10, inclusive
     repeat(100) begin
-		fork
+		// fork
 			`uvm_do_on_with(req, p_sequencer.htax_seqr[0], {req.length inside {[3:10]};})
 			`uvm_do_on_with(req, p_sequencer.htax_seqr[1], {req.length inside {[3:10]};})
 			`uvm_do_on_with(req, p_sequencer.htax_seqr[2], {req.length inside {[3:10]};})
 			`uvm_do_on_with(req, p_sequencer.htax_seqr[3], {req.length inside {[3:10]};})
-		join
+		// join
     end
   endtask : body
 

@@ -4,6 +4,6 @@
 //
 -f
 run_vm.f
-+UVM_TESTNAME=short_packet_test
++UVM_TESTNAME=simple_port_port_test
 -define
-TEST8
+TEST7

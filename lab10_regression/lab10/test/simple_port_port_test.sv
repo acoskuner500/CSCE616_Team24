@@ -41,12 +41,14 @@ class simple_port_port_vsequence extends htax_base_vseq;
   task body();
 		// Exectuing 10 TXNs on fixed port {0,1,2,3} 
     repeat(100) begin
-		fork
-			`uvm_do_on_with(req, p_sequencer.htax_seqr[0], {req.dest_port==0;})
-			`uvm_do_on_with(req, p_sequencer.htax_seqr[1], {req.dest_port==1;})
-			`uvm_do_on_with(req, p_sequencer.htax_seqr[2], {req.dest_port==2;})
-			`uvm_do_on_with(req, p_sequencer.htax_seqr[3], {req.dest_port==3;})
-		join
+		for (int j=0; j<4; j++) begin
+			fork
+				`uvm_do_on_with(req, p_sequencer.htax_seqr[0], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
+				`uvm_do_on_with(req, p_sequencer.htax_seqr[1], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
+				`uvm_do_on_with(req, p_sequencer.htax_seqr[2], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
+				`uvm_do_on_with(req, p_sequencer.htax_seqr[3], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
+			join
+		end
     end
   endtask : body
 

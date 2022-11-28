@@ -24,7 +24,7 @@ UVM_PLI
 ../tb/htax_tx_interface.sv
 ../tb/htax_rx_interface.sv
 -DEFINE
-TEST8
+TEST7
 -CDSLIB
 ./xcelium.d/run.lnx86.22.03.d/cdsrun.lib
 -HDLVAR

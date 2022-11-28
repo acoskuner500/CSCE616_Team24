@@ -3,14 +3,16 @@ Starting gui mode
 vmanager: *I,runner.startingSession: Starting session /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/run_vm.vsif
 vmanager: *W,runner.oldRunnerDeprecation: Old Runner will be deprecated soon. It is recommended that you enable Runner 2.0 using configuration option runner.drm.enable_runner2. Starting next release, Runner 2.0 will be enabled by default.
 vmanager: *W,runner.drmWarning: Runner: DRM: Job limit of 100 was reduced to 1 due to usage of Serial Local DRM.
-vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_26_16_57_24_2245 started.
+vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_28_10_28_44_0470 started.
+vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_10_28_44_0470/merged_ucds/default/1669653142869/merged_tests/icc_42afc8a3_60fbf51f.ucd(merged)
+vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_27_18_37_38_4617/merged_ucds/default/1669596072086/merged_tests/icc_42afc8a3_60fbf51f.ucd(merged)
 vmanager: *I,runner.startingSession: Starting session /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/run_vm.vsif
 vmanager: *W,runner.oldRunnerDeprecation: Old Runner will be deprecated soon. It is recommended that you enable Runner 2.0 using configuration option runner.drm.enable_runner2. Starting next release, Runner 2.0 will be enabled by default.
 vmanager: *W,runner.drmWarning: Runner: DRM: Job limit of 100 was reduced to 1 due to usage of Serial Local DRM.
-vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_26_17_14_06_3691 started.
-vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_26_17_14_06_3691/merged_ucds/default/1669504664802/merged_tests/icc_42afc8a3_34875633.ucd(merged)
+vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_28_11_07_34_9000 started.
+vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_07_34_9000/merged_ucds/default/1669655468951/merged_tests/icc_7fee21f9_5af479c5.ucd(merged)
 vmanager: *I,runner.startingSession: Starting session /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/run_vm.vsif
 vmanager: *W,runner.oldRunnerDeprecation: Old Runner will be deprecated soon. It is recommended that you enable Runner 2.0 using configuration option runner.drm.enable_runner2. Starting next release, Runner 2.0 will be enabled by default.
 vmanager: *W,runner.drmWarning: Runner: DRM: Job limit of 100 was reduced to 1 due to usage of Serial Local DRM.
-vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_26_18_09_46_5380 started.
-vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_26_18_09_46_5380/merged_ucds/default/1669508008807/merged_tests/icc_42afc8a3_60fbf51f.ucd(merged)
+vmanager: *I,runner.sessionStarted: Session htax_regress.acoskuner500.22_11_28_11_23_09_7700 started.
+vmanager: *I,MERGL1: The merged icc coverage cache was reused for analysis: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_23_09_7700/merged_ucds/default/1669656315670/merged_tests/icc_7fee21f9_5af479c5.ucd(merged)
