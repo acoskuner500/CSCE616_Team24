@@ -14,7 +14,7 @@
 waves.tcl
 -COVOVERWRITE
 -COVWORKDIR
-/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_11_23_09_7700/chain_0/all_test/run_15/cov_work
+/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_19_48_46_6421/chain_0/all_test/run_15/cov_work
 -SVSEED
 random
 +UVM_TESTNAME=simple_port_port_test
@@ -24,7 +24,7 @@ random
 +EMGRLOG
 xrun.log
 -XLSTIME
-1669656296
+1669686692
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx86.22.03.d
@@ -38,4 +38,4 @@ xrun
 -XLVERSION
 "TOOL:	xrun	22.03-s004"
 -XLNAME
-./xcelium.d/run.lnx86.22.03.d/hera3.ece.tamu.edu_39793
+./xcelium.d/run.lnx86.22.03.d/hera3.ece.tamu.edu_7543

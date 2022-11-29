@@ -1,0 +1,44 @@
+vm_srmp: *N,START: vManager Single Run Metrics Processor...
+
+--------------------------------------------------------------------
+-- Phase: Reading Input vSofs
+--------------------------------------------------------------------
+vm_srmp: *N,READ: Reading vSof ${BRUN_RUN_DIR}/.SRvSof/export0.vsof
+vm_srmp: *N,READ: Reading vSof ${BRUN_RUN_DIR}/.SRvSof/xmvlog_2022_11_28_19_31_48.vsof
+vm_srmp: *N,IMPORT: Import results from ${BRUN_RUN_DIR}/.SRvSof/export0.vsof
+vm_srmp: *N,IMPORT: Import results from ${BRUN_RUN_DIR}/.SRvSof/xmvlog_2022_11_28_19_31_48.vsof
+
+--------------------------------------------------------------------
+-- Phase: User Scanning
+--------------------------------------------------------------------
+vm_srmp: *N,EXEC: vm_scan.pl ius.flt shell.flt 
+vm_scan.pl: Scanning information:
+  Log file: local_log.log
+  Filter files:
+    1. ius.flt
+    2. shell.flt
+vm_scan.pl: max patterns (50) reached, stopping scan. 
+Wrote ./.vm_scan.hera3.ece.tamu.edu.23659.1/vm_scan_28_19_31_49.vsof
+vm_srmp: *N,READ: Reading vSof ./.vm_scan.hera3.ece.tamu.edu.23659.1/vm_scan_28_19_31_49.vsof
+vm_srmp: *N,IMPORT: Import results from ./.vm_scan.hera3.ece.tamu.edu.23659.1/vm_scan_28_19_31_49.vsof
+
+--------------------------------------------------------------------
+-- Phase: Complementary Scanning
+--------------------------------------------------------------------
+vm_srmp: *N,EXEC: vm_scan.pl  /opt/coe/cadence/XCELIUM/tools/bin/cdns_sim.flt /opt/coe/cadence/XCELIUM/tools/bin/ovm_sv_lib.flt /opt/coe/cadence/vmanager/tools/vmgr/runner/bin/vm.flt 
+vm_scan.pl: Scanning information:
+  Log file: local_log.log
+  Filter files:
+    1. /opt/coe/cadence/XCELIUM/tools/bin/cdns_sim.flt
+    2. /opt/coe/cadence/XCELIUM/tools/bin/ovm_sv_lib.flt
+    3. vm.flt
+vm_scan.pl: max patterns (50) reached, stopping scan. 
+Wrote ./.vm_scan.hera3.ece.tamu.edu.23659.2/vm_scan_28_19_31_50.vsof
+vm_srmp: *N,READ: Reading vSof ./.vm_scan.hera3.ece.tamu.edu.23659.2/vm_scan_28_19_31_50.vsof
+vm_srmp: *N,IMPORT: Import results from ./.vm_scan.hera3.ece.tamu.edu.23659.2/vm_scan_28_19_31_50.vsof
+
+--------------------------------------------------------------------
+-- Phase: Writing Single Run vSof
+--------------------------------------------------------------------
+vm_srmp: *N,WRITE: Writing vSof ${BRUN_RUN_DIR}/local_vsof.txt
+vm_srmp: *N,COMPLETE: vManager Single Run Metrics Processor completed successfully

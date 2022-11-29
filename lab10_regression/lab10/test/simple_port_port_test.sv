@@ -32,24 +32,34 @@ endclass : simple_port_port_test
 
 class simple_port_port_vsequence extends htax_base_vseq;
 
-  `uvm_object_utils(simple_random_vsequence)
+	`uvm_object_utils(simple_random_vsequence)
 
-  function new (string name = "simple_port_port_vsequence");
-    super.new(name);
-  endfunction : new
+	htax_packet_c pkt0;
+	htax_packet_c pkt1;
+	htax_packet_c pkt2;
+	htax_packet_c pkt3;
 
-  task body();
+	function new (string name = "simple_port_port_vsequence");
+		super.new(name);
+		
+		pkt0 = new();
+		pkt1 = new();
+		pkt2 = new();
+		pkt3 = new();
+	endfunction : new
+
+	task body();
 		// Exectuing 10 TXNs on fixed port {0,1,2,3} 
-    repeat(100) begin
-		for (int j=0; j<4; j++) begin
-			fork
-				`uvm_do_on_with(req, p_sequencer.htax_seqr[0], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
-				`uvm_do_on_with(req, p_sequencer.htax_seqr[1], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
-				`uvm_do_on_with(req, p_sequencer.htax_seqr[2], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
-				`uvm_do_on_with(req, p_sequencer.htax_seqr[3], {req.dest_port==j; req.length inside {[3:10]}; req.delay < 5;})
-			join
+		repeat(500) begin
+			for (int j=0; j<4; j++) begin
+				fork
+					`uvm_do_on_with(pkt0, p_sequencer.htax_seqr[0], {pkt0.dest_port==j; pkt0.length inside {[3:10]}; pkt0.delay < 5;})
+					`uvm_do_on_with(pkt1, p_sequencer.htax_seqr[1], {pkt1.dest_port==j; pkt1.length inside {[3:10]}; pkt1.delay < 5;})
+					`uvm_do_on_with(pkt2, p_sequencer.htax_seqr[2], {pkt2.dest_port==j; pkt2.length inside {[3:10]}; pkt2.delay < 5;})
+					`uvm_do_on_with(pkt3, p_sequencer.htax_seqr[3], {pkt3.dest_port==j; pkt3.length inside {[3:10]}; pkt3.delay < 5;})
+				join
+			end
 		end
-    end
-  endtask : body
+	endtask : body
 
 endclass : simple_port_port_vsequence

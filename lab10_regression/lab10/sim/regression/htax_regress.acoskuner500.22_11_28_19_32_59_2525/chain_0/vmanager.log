@@ -1,0 +1,12 @@
+Cadence vManager(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems Inc - Simulator version: 22.03-s004 - Coverage engine version: 22.03-s004
+Starting batch mode
+vmanager> #mode:-regr
+vmanager> puts [format "VMGR_TIME_LOG;merge_start;%s" [clock seconds]]; 
+VMGR_TIME_LOG;merge_start;1669685737
+vmanager> load -session htax_regress.acoskuner500.22_11_28_19_32_59_2525;
+Loading sessions: 
+ htax_regress.acoskuner500.22_11_28_19_32_59_2525 
+Done.
+vmanager> readCoverageInternal;
+vmanager> puts [format "VMGR_TIME_LOG;merge_end;%s" [clock seconds]];
+VMGR_TIME_LOG;merge_end;1669685738
