@@ -19,12 +19,17 @@ class htax_rx_monitor_c extends uvm_monitor;
 		option.per_instance = 1;
 		option.name = "cover_htax_rx_intf";
 
-	// TO DO : Coverpoint for rx_vc_gnt: All the virtual channels are granted atleast once.
-		RX_VC_GNT: coverpoint htax_rx_intf.rx_vc_gnt {illegal_bins b1 = {0};}
-	// TO DO : Coverpoint for rx_vc_req: All the VCs are requested atleast once. Ignore what is not allowed, or put it as illegal
-		RX_VC_REQ: coverpoint htax_rx_intf.rx_vc_req {illegal_bins b2 = {0};}
-	// TO DO : Coverpoint for SOT: 
-		RX_SOT: coverpoint htax_rx_intf.rx_sot {bins b5 = {1,2}; illegal_bins b6 = {0,3};}
+	// Coverpoint for rx_data:
+		RX_DATA: coverpoint htax_rx_intf.rx_data {bins b1 = {[0:$]};}
+	// Coverpoint for rx_sot: 
+		RX_SOT: coverpoint htax_rx_intf.rx_sot {ignore_bins b1 = {0,3};}
+	endgroup
+	
+	covergroup cover_rx_eot;
+		option.per_instance = 1;
+		option.name = "cover_rx_eot";
+	// Coverpoint for rx_eot:
+		RX_EOT: coverpoint htax_rx_intf.rx_eot {bins b0={0}; bins b1={1};}	
 	endgroup
 
 	function new (string name, uvm_component parent);
@@ -32,6 +37,7 @@ class htax_rx_monitor_c extends uvm_monitor;
 		rx_collect_port = new ("rx_collect_port", this);
 		rx_mon_packet 	= new();
 		this.cover_htax_rx_intf = new();
+		this.cover_rx_eot = new();
 	endfunction : new
 
 	function void build_phase (uvm_phase phase);
@@ -45,6 +51,8 @@ class htax_rx_monitor_c extends uvm_monitor;
 			pkt_len=0;
 			//Wait for rising edge of htax_rx_intf.rx_sot
 			@(posedge (|htax_rx_intf.rx_sot))
+			cover_htax_rx_intf.sample();
+			cover_rx_eot.sample();
 			
 			//On consequtive cycles append htax_rx_intf.rx_data to rx_mon_packet.data[] till htax_rx_intf.rx_eot pulse
 			while(!htax_rx_intf.rx_eot==1) begin
@@ -53,6 +61,7 @@ class htax_rx_monitor_c extends uvm_monitor;
 				rx_mon_packet.data[pkt_len-1] = htax_rx_intf.rx_data;
 			end
 			
+			cover_rx_eot.sample();
 			//Write the rx_mon_packet on anaylysis port
 			rx_collect_port.write(rx_mon_packet);
 		

@@ -1,8 +1,0 @@
-Mon Nov 28 19:35:19 CST 2022
-/opt/coe/cadence/vmanager/tools/vmgr/runner/bin/vm_append_to_vsof.pl
-printing from file: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_19_32_59_2525/chain_0/post_session_data/local_vsof_1669685718.txt
-printing to file: /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_28_19_32_59_2525/htax_regress.vsof
-runs data dir is: /home/vmanager/vmgr_2003profile/chunks/projects/vmgr
-Chunk name is: /home/vmanager/vmgr_2003profile/chunks/projects/vmgr/of_sessions/htax_regress.acoskuner500.22_11_28_19_32_59_2525/55_158c5eca-6f86-11ed-9ac9-f72cf0072e7a.chunk
-From offset: 0
-To offset: 4294967295

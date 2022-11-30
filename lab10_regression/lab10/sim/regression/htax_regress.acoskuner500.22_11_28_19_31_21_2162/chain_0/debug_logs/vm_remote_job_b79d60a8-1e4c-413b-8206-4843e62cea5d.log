@@ -1,2 +1,0 @@
-2022-11-28 19:32:26,330 - root - ERROR - lost connection to jobs manager killing sub process
-2022-11-28 19:32:26,331 - websocket - ERROR - error from callback <function on_close at 0x7f4030db1620>: [Errno 3] No such process

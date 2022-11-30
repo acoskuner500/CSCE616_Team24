@@ -50,7 +50,7 @@ class simple_port_port_vsequence extends htax_base_vseq;
 
 	task body();
 		// Exectuing 10 TXNs on fixed port {0,1,2,3} 
-		repeat(500) begin
+		repeat(750) begin
 			for (int j=0; j<4; j++) begin
 				fork
 					`uvm_do_on_with(pkt0, p_sequencer.htax_seqr[0], {pkt0.dest_port==j; pkt0.length inside {[3:10]}; pkt0.delay < 5;})

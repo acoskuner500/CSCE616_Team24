@@ -40,7 +40,7 @@ module htax_outport_data_mux #(
 		endcase
 	end
 
-	assign selected_eot = |(eot_in & inport_sel_reg) & ~(&(eot_in));
+	assign selected_eot = |(eot_in & inport_sel_reg);// & ~(&(eot_in));
 
 	`ifdef ASYNC_RES
 	always @(posedge clk or negedge res_n) `else

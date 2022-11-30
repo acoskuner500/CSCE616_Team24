@@ -1,4 +1,0 @@
-session_output htax_regress.acoskuner500.22_11_28_19_48_46_6421 {
-	session_status : <text>pre_session_script_done</text>;
-}
-

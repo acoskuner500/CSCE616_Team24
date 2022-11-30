@@ -42,7 +42,7 @@ class simple_random_vsequence extends htax_base_vseq;
 
   task body();
 		// Exectuing 10 TXNs on ports {0,1,2,3} randomly 
-    repeat(500) begin
+    repeat(750) begin
       port = $urandom_range(0,3);
       `uvm_do_on(req, p_sequencer.htax_seqr[port])
 

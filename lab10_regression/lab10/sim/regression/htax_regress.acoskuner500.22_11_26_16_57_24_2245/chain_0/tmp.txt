@@ -1,5 +1,0 @@
-session_output htax_regress.acoskuner500.22_11_26_16_57_24_2245 {
-	session_status : <text>pre_session_script</text>;
-	pre_session_log_file : <text>/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_26_16_57_24_2245/chain_0/pre_session.log</text>;
-}
-

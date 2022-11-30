@@ -18,3 +18,11 @@
 [INFO ] 2022-11-28 16:11:35 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 35493
 [ERROR] 2022-11-29 01:20:44 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
 [INFO ] 2022-11-29 01:20:50 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 37955
+[ERROR] 2022-11-29 16:24:41 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-11-29 16:24:46 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 35795
+[ERROR] 2022-11-29 17:38:41 [com.cadence.mdv.bl.impl.core.blNative.MDVEntitySimpleFallbackHandler] [AWT-EventQueue-0] - Slim entity had to fallback because someone asked about is_lang_vlog
+[ERROR] 2022-11-29 17:38:42 [com.cadence.mdv.bl.impl.core.blNative.MDVEntitySimpleFallbackHandler] [AWT-EventQueue-0] - Slim entity had to fallback because someone asked about is_lang_vlog
+[ERROR] 2022-11-29 21:29:18 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-11-29 21:29:24 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 36468
+[ERROR] 2022-11-29 23:26:19 [com.cadence.mdv.services.ClientLinkToServerImpl] [main] - No XLM Home defined in the server project
+[INFO ] 2022-11-29 23:26:26 [com.cadence.mdv.imc.Main] [main] - Binding debug tools http on port: 45778

@@ -1,0 +1,38 @@
+vmanager: *I,MERGL1: Preparing icc target model ...
+vmanager: *I,MERGL1: Doing model union ...
+vmanager: *I,MERGL2:   With primary run (/home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/model_dir): /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/model_dir/icc_42afc8a3_67c266c2.ucm
+vmanager: *I,MERGL1: Target model generated successfully.
+vmanager: *I,MERGL1: Projecting data into the target model ...
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_1/cov_work/scope/test_sv-299641035:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_2/cov_work/scope/test_sv-31235061:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_3/cov_work/scope/test_sv1361279377:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_4/cov_work/scope/test_sv-920434646:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_5/cov_work/scope/test_sv2032345594:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_6/cov_work/scope/test_sv1428372237:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_7/cov_work/scope/test_sv1294145920:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_8/cov_work/scope/test_sv-584847456:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_9/cov_work/scope/test_sv589545712:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_10/cov_work/scope/test_sv-1289496802:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_11/cov_work/scope/test_sv-1692175772:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_12/cov_work/scope/test_sv1193496494:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_13/cov_work/scope/test_sv1461920265:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_14/cov_work/scope/test_sv-1356660636:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL2:   /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/chain_0/all_test/run_15/cov_work/scope/test_sv2133007286:
+vmanager: *I,MERGL3:       Data is projected in to the target model.
+vmanager: *I,MERGL1: Writing icc model to /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/merged_ucds/default/1669776663112/icc_42afc8a3_67c266c2.ucm(merged)
+vmanager: *I,MERGL1: Writing icc data to /home/grads/a/acoskuner500/csce616/lab10_regression/lab10/sim/regression/htax_regress.acoskuner500.22_11_29_20_48_02_4686/merged_ucds/default/1669776663112/merged_tests/icc_42afc8a3_67c266c2.ucd(merged)
+vmanager: *I,coverage.merge_op_done_no_warns: Merge operation (session runs merge) is done without any conflicts.
